@@ -20,6 +20,33 @@ closeBtn.addEventListener("click", function () {
 });
 // set year
 date.innerHTML = new Date().getFullYear();
+   const hostname = window.location.hostname;
 
-
-;
+   document.addEventListener('DOMContentLoaded', function() {
+    function setupIntersectionObserver(targets, options) {
+      const observerCallback = (entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+          } else {
+            entry.target.classList.remove('in-view');
+          }
+        });
+      };
+  
+      const observer = new IntersectionObserver(observerCallback, options);
+  
+      targets.forEach(target => {
+        observer.observe(target);
+      });
+    }
+    const skillsCards = document.querySelectorAll('.skills-card');
+  
+    const observerOptions = {
+      threshold: 0.3 
+    };
+  
+    // Set up the observer for the selected elements
+    setupIntersectionObserver(skillsCards, observerOptions);
+  });
+  
