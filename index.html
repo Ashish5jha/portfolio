@@ -28,6 +28,7 @@
   .hero,
   .nav {
     background-color: #f4f2ee;
+    height: 100vh !important;
   }
 
   .nav-logo {
@@ -87,6 +88,7 @@
 
   .wrapper {
     width: 100vw;
+    height: 100vh;
     position: relative;
     border-radius: 5px;
     background-image: linear-gradient(to top, #e0ddd8 0%, #d3d0cb 100%);
@@ -94,8 +96,8 @@
   }
 
   .wave {
-    width: 80rem;
-    height: 84rem;
+    width: 77rem;
+    height: 89rem;
     position: absolute;
     top: -25%;
     left: 50%;
@@ -266,14 +268,22 @@
   .skill-box:hover i {
     transform: scale(1.2);
   }
+  .nav-logo {
+      position: fixed;
+      top: 10px; /* Adjust as needed */
+      left: 24px; /* Adjust as needed */
+      width: 60px;
+      height: 60px;
+      z-index: 1000; /* Ensure it stays on top of other elements */
+    }
 </style>
 </head>
 
 <body>
   <!-- navbar -->
-  <nav class="nav" id="nav">
+  <!-- <nav class="nav" id="nav">
     <div class="nav-center">
-      <!-- nav header -->
+
       <div class="nav-header">
         <a href="https://ashishjha.co.in/"><img src="./Ashish Jha __ Home_files/logo.webp" width="60px" height="60px"
             class="nav-logo" alt="nav logo"></a>
@@ -281,7 +291,6 @@
           <i class="fas fa-bars"></i>
         </button>
       </div>
-      <!-- nav-links -->
       <ul class="nav-links">
         <li>
           <a href="https://ashishjha.co.in/">.home</a>
@@ -297,16 +306,16 @@
         </li>
       </ul>
     </div>
-  </nav>
-  <!-- end of navbar -->
+  </nav> -->
+  <a href="https://ashishjha.co.in/"><img src="./Ashish Jha __ Home_files/logo.webp" width="60px" height="60px"
+    class="nav-logo" alt="nav logo"></a>
 
   <!-- sidebar -->
-  <aside class="sidebar" id="sidebar">
+  <!-- <aside class="sidebar" id="sidebar">
     <div>
       <button class="close-btn" id="close-btn">
         <i class="far fa-window-close"></i>
       </button>
-      <!-- nav-links -->
       <ul class="sidebar-links">
         <li class="li-style">
           <i class="fas fa-home sidebar-icon"></i>
@@ -325,7 +334,6 @@
           <a href="https://ashishjha.co.in/contact">contact</a>
         </li>
       </ul>
-      <!-- social icons -->
       <ul class="social-icons">
         <li class="side-social-neumorph">
           <a href="https://github.com/ashishjha" class="social-icon" target="_blank">
@@ -354,7 +362,8 @@
         </li>
       </ul>
     </div>
-  </aside>
+  </aside> -->
+ 
   <!-- end of sidebar -->
   <!-- header -->
   <header class="hero">
@@ -393,7 +402,7 @@
       <div class="wave"></div>
     </div>
     <!-- Reaction Emoji -->
-    <div class="reaction-emoji" id="reactionEmoji">😎</div>
+    <div class="reaction-emoji" id="reactionEmoji"  title="Surprise Click">😎</div>
 
   </header>
   <!-- end of header -->
@@ -916,7 +925,7 @@
   </footer>
   <script>
     // Emoji array containing 5 different emojis
-    const emojis = ['😎', '😂', '😍', '🤔', '🥳'];
+    const emojis = ['😎', '😂', '😍', '🤔', '🥳','🐧'];
     let currentEmojiIndex = 0;
 
     // Function to change emoji every 3 seconds
@@ -963,7 +972,7 @@
 
 
   </script>
-  <script src="./Ashish Jha __ Home_files/app.js.download"></script>
+  <script src="./Ashish Jha __ Home_files/app.js"></script>
 
 </body>
 
