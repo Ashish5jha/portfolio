@@ -13,16 +13,18 @@
   <link href="./Ashish Jha __ Home_files/styles.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <!-----Fevicon----->
-   <link rel="apple-touch-icon" sizes="180x180" href="./Ashish Jha __ Home_files/logo.webp">
+  <link rel="apple-touch-icon" sizes="180x180" href="./Ashish Jha __ Home_files/logo.webp">
   <link rel="icon" type="image/png" sizes="32x32" href="./Ashish Jha __ Home_files/logo.webp">
   <link rel="icon" type="image/png" sizes="16x16" href="./Ashish Jha __ Home_files/logo.webp">
   <link rel="manifest" href="./Ashish Jha __ Home_files/site.webmanifest">
 </head>
 <!-- Style -->
 <style>
-  .hero,.nav{
+  .hero,
+  .nav {
     background-color: #f4f2ee;
   }
+
   .nav-logo {
     border-radius: 50%;
     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
@@ -32,7 +34,8 @@
   .nav-logo:hover {
     transform: scale(1.25);
   }
-  .hero-photos{
+
+  .hero-photos {
     max-width: 25rem;
     height: 35rem;
     -o-object-fit: cover;
@@ -40,34 +43,71 @@
     border-radius: var(--radius);
     position: relative;
   }
+
   .about-img {
-  position: relative;
-  animation: bubble 2s ease-in-out infinite; 
-  transition: left 2s ease-in;
-}
-.about-img:hover::before{
-  left: -3rem;
-}
-@keyframes bubble {
-  0% {
-    transform: translateY(0); 
+    position: relative;
+    animation: bubble 2s ease-in-out infinite;
+    transition: left 2s ease-in;
   }
-  50% {
-    transform: translateY(-20px);
+
+  .about-img:hover::before {
+    left: -3rem;
   }
-  100% {
-    transform: translateY(0);
-  }
-}
-.social-icon {
-      transition: transform 0.3s ease-in-out;
+
+  @keyframes bubble {
+    0% {
+      transform: translateY(0);
     }
 
-    .social-icon:hover {
-      transform: scale(1.2);
+    50% {
+      transform: translateY(-20px);
     }
- 
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  .social-icon {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .social-icon:hover {
+    transform: scale(1.2);
+  }
+
+  .wrapper {
+    width: 100vw;
+    position: relative;
+    border-radius: 5px;
+    background-image: linear-gradient(to top, #e0ddd8 0%, #d3d0cb 100%);
+    overflow: hidden;
+  }
+
+  .wave {
+    width: 80rem;
+    height: 84rem;
+    position: absolute;
+    top: -25%;
+    left: 50%;
+    margin-left: -500px;
+    margin-top: -500px;
+    border-radius: 35%;
+    background: #f4f2ee;
+    animation: wave 15s infinite linear;
+  }
+
+  @keyframes wave {
+    from {
+      transform: rotate(0deg);
+    }
+
+    from {
+      transform: rotate(360deg);
+    }
+  }
 </style>
+</head>
 
 <body>
   <!-- navbar -->
@@ -75,8 +115,8 @@
     <div class="nav-center">
       <!-- nav header -->
       <div class="nav-header">
-        <a href="https://ashishjha.co.in/"><img src="./Ashish Jha __ Home_files/logo.webp" width="60px" height="60px" class="nav-logo"
-            alt="nav logo"></a>
+        <a href="https://ashishjha.co.in/"><img src="./Ashish Jha __ Home_files/logo.webp" width="60px" height="60px"
+            class="nav-logo" alt="nav logo"></a>
         <button class="nav-btn" id="nav-btn">
           <i class="fas fa-bars"></i>
         </button>
@@ -84,16 +124,16 @@
       <!-- nav-links -->
       <ul class="nav-links">
         <li>
-          <a href="https://ashishjha.co.in/">home</a>
+          <a href="https://ashishjha.co.in/">.home</a>
         </li>
         <li>
-          <a href="https://ashishjha.co.in/about">about</a>
+          <a href="https://ashishjha.co.in/about">.about</a>
         </li>
         <li>
-          <a href="https://ashishjha.co.in/projects">projects</a>
+          <a href="https://ashishjha.co.in/projects">.projects</a>
         </li>
         <li>
-          <a href="https://ashishjha.co.in/contact">contact</a>
+          <a href="https://ashishjha.co.in/contact">.contact</a>
         </li>
       </ul>
     </div>
@@ -158,34 +198,37 @@
   <!-- end of sidebar -->
   <!-- header -->
   <header class="hero">
-    <div class="section-center hero-center">
-      <article class="hero-info">
-        <div class="underline"></div>
-        <h1>Hi, I'm Ashish Jha</h1>
-        <h4>Simplifying Complexity with Elegant Code.</h4>
+    <div class=" hero-center wrapper">
+      <div style="z-index: 1; display: flex; justify-content: space-around; align-items: center; min-width: 100vw !important;" class="section-center">
+        <article class="hero-info">
+          <div class="underline"></div>
+          <h1>Hi, I'm Ashish Jha</h1>
+          <h4>Simplifying Complexity with Elegant Code.</h4>
 
-        <!-- social icons -->
-        <ul class="social-icons hero-icons">
-          <li class="index-neumorph">
-            <a href="https://github.com/Ashjha75" class="social-icon" target="_blank">
-              <i class="fab fa-github"></i>
-            </a>
-          </li>
-          <li class="index-neumorph">
-            <a href="https://www.linkedin.com/in/ashish-jha-890ab3206/" class="social-icon" target="_blank">
-              <i class="fab fa-linkedin"></i>
-            </a>
-          </li>
-          <li class="index-neumorph">
-            <a href="https://x.com/AshishJha57" class="social-icon" target="_blank">
-              <i class="fab fa-twitter"></i>
-            </a>
-          </li>
-        </ul>
-      </article>
-      <article class="hero-img">
-        <img src="./Ashish Jha __ Home_files/ashish.jpg" class="hero-photo" alt="ashish jha">
-      </article>
+          <!-- social icons -->
+          <ul class="social-icons hero-icons">
+            <li class="index-neumorph">
+              <a href="https://github.com/Ashjha75" class="social-icon" target="_blank">
+                <i class="fab fa-github"></i>
+              </a>
+            </li>
+            <li class="index-neumorph">
+              <a href="https://www.linkedin.com/in/ashish-jha-890ab3206/" class="social-icon" target="_blank">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </li>
+            <li class="index-neumorph">
+              <a href="https://x.com/AshishJha57" class="social-icon" target="_blank">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+          </ul>
+        </article>
+        <article class="hero-img">
+          <img src="./Ashish Jha __ Home_files/ashish.jpg" class="hero-photo" alt="ashish jha">
+        </article>
+      </div>
+      <div class="wave" ></div>
     </div>
   </header>
   <!-- end of header -->
@@ -216,7 +259,7 @@
           Boot to deliver seamless, data-driven products. I’m constantly expanding my skill set and adapting to new
           technologies to stay ahead in this fast-evolving field.
         </p>
-        
+
         <a class="btn" href="https://ashishjha.co.in/about">about me</a>
       </article>
     </div>
@@ -586,7 +629,7 @@
 
     <p>© <span id="date">2024</span> ashish jha. all rights reserved</p>
   </footer>
-  <script src="./Ashish Jha __ Home_files/app.js.download"></script>
+  <script src="./Ashish Jha __ Home_files/app.js"></script>
 
 
 
