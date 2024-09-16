@@ -20,6 +20,11 @@
 </head>
 <!-- Style -->
 <style>
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
   .hero,
   .nav {
     background-color: #f4f2ee;
@@ -42,6 +47,10 @@
     object-fit: cover;
     border-radius: var(--radius);
     position: relative;
+  }
+
+  .index-neumorph {
+    background-color: transparent !important;
   }
 
   .about-img {
@@ -105,6 +114,157 @@
     from {
       transform: rotate(360deg);
     }
+  }
+
+  /* Reaction Emoji at the bottom-left corner */
+  .reaction-emoji {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    font-size: 60px;
+    cursor: pointer;
+    animation: bounce 2s infinite;
+    z-index: 100;
+    user-select: none;
+  }
+
+  /* Small emojis generated on click */
+  .small-emoji {
+    position: absolute;
+    font-size: 20px;
+    opacity: 0;
+    animation: flyAway 3s forwards ease-out;
+  }
+
+  @keyframes flyAway {
+    0% {
+      transform: translate(0, 0) scale(1);
+      opacity: 1;
+    }
+
+    100% {
+      transform: translate(calc(200px - 400px * var(--randomX)), calc(-200px * var(--randomY))) scale(0.5);
+      opacity: 0;
+    }
+  }
+
+  /* Bounce animation for the main emoji */
+  @keyframes bounce {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  .skills {
+    background-color: #fffaeb;
+  }
+
+  @keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+      transform: translateY(0);
+    }
+
+    40% {
+      transform: translateY(-10px);
+    }
+
+    60% {
+      transform: translateY(-5px);
+    }
+  }
+
+  .icon1 {
+    display: inline-block;
+    animation: bounce 2s infinite;
+  }
+
+  .skills-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px 0;
+  }
+
+  .skills-card {
+    background-color: #fffaeb;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    width: calc(50% - 40px);
+    /* Adjust width to fit two cards per row */
+    box-sizing: border-box;
+    opacity: 0;
+    transform: translateX(0);
+    transition: all 0.5s ease-in-out;
+  }
+  .skills-card:hover{
+    filter: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));
+    cursor: pointer;
+  }
+
+  .skills-card.slide-left {
+    transform: translateX(-100%);
+  }
+
+  .skills-card.slide-right {
+    transform: translateX(100%);
+  }
+
+  .skills-card.in-view {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .skills {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .skill-box {
+    background-color: rgba(193, 192, 189, 0.477);
+    color: darkgreen;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    text-align: center;
+    margin: 10px;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  .skill-box span {
+    font-size: 14px;
+    font-weight: 600;
+    color: #513c06;
+  }
+
+  .skill-box i {
+    font-size: 24px;
+    margin-bottom: 5px;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .skill-box:hover i {
+    color: #fff;
+  }
+
+  .skill-box:hover i {
+    transform: scale(1.2);
   }
 </style>
 </head>
@@ -199,10 +359,12 @@
   <!-- header -->
   <header class="hero">
     <div class=" hero-center wrapper">
-      <div style="z-index: 1; display: flex; justify-content: space-around; align-items: center; min-width: 100vw !important;" class="section-center">
+      <div
+        style="z-index: 1; display: flex; justify-content: space-around; align-items: center; min-width: 100vw !important;"
+        class="section-center">
         <article class="hero-info">
           <div class="underline"></div>
-          <h1>Hi, I'm Ashish Jha</h1>
+          <h1>Hi, I'm Ashish Jha </h1>
           <h4>Simplifying Complexity with Elegant Code.</h4>
 
           <!-- social icons -->
@@ -228,8 +390,11 @@
           <img src="./Ashish Jha __ Home_files/ashish.jpg" class="hero-photo" alt="ashish jha">
         </article>
       </div>
-      <div class="wave" ></div>
+      <div class="wave"></div>
     </div>
+    <!-- Reaction Emoji -->
+    <div class="reaction-emoji" id="reactionEmoji">😎</div>
+
   </header>
   <!-- end of header -->
   <!-- about -->
@@ -264,6 +429,126 @@
       </article>
     </div>
   </section>
+  <section class="section skills">
+    <div class="section-center" style="width: 100%; justify-content: start;align-items: center;display: flex;">
+      <article class="about-info">
+        <div class="section-title about-title ">
+          <h2>My tech stack</h2>
+          <div class="underline"></div>
+        </div>
+
+        <div class="skills-section" id="skills-section">
+          <div class="skills-card slide-left">
+            <h3 style="color: darkgreen;">Frontend</h3>
+            <section class="skills">
+              <div class="skill-box">
+                <i class="fab fa-html5"></i>
+                <span>HTML</span>
+              </div>
+              <div class="skill-box">
+                <i class="fab fa-css3-alt"></i>
+                <span>CSS</span>
+              </div>
+              <div class="skill-box">
+                <i class="fab fa-js"></i>
+                <span>JavaScript</span>
+              </div>
+              <div class="skill-box">
+                <i class="fas fa-code"></i>
+                <span>TypeScript</span>
+              </div>
+              <div class="skill-box">
+                <i class="fab fa-react"></i>
+                <span>React</span>
+              </div>
+              <div class="skill-box">
+                <i class="fab fa-angular"></i>
+                <span>Angular</span>
+              </div>
+            </section>
+          </div>
+
+          <!-- Backend Section -->
+          <div class="skills-card slide-right">
+            <h3 style="color: darkgreen;">Backend</h3>
+            <section class="skills">
+              <div class="skill-box">
+                <i class="fab fa-java"></i>
+                <span>Java</span>
+              </div>
+              <div class="skill-box">
+                <i class="fab fa-node-js"></i>
+                <span>Node.js</span>
+              </div>
+              <div class="skill-box">
+                <i class="fas fa-server"></i>
+                <span>Express</span>
+              </div>
+              <div class="skill-box">
+                <i class="fas fa-leaf"></i>
+                <span>Spring Boot</span>
+              </div>
+              <div class="skill-box">
+                <i class="fas fa-database"></i>
+                <span>Hibernate</span>
+              </div>
+            </section>
+          </div>
+
+          <!-- Database Section -->
+          <div class="skills-card slide-left">
+            <h3 style="color: darkgreen;">Database</h3>
+            <section class="skills">
+              <div class="skill-box">
+                <i class="fas fa-database"></i>
+                <span>MySQL</span>
+              </div>
+              <div class="skill-box">
+                <i class="fas fa-database"></i>
+                <span>PostgreSQL</span>
+              </div>
+              <div class="skill-box">
+                <i class="fas fa-database"></i>
+                <span>MongoDB</span>
+              </div>
+              <div class="skill-box">
+                <i class="fas fa-database"></i>
+                <span>Mongoose</span>
+              </div>
+            </section>
+          </div>
+
+          <!-- Tools Section -->
+          <div class="skills-card slide-right">
+            <h3 style="color: darkgreen;">Tools</h3>
+            <section class="skills">
+              <div class="skill-box">
+                <i class="fab fa-git-alt"></i>
+                <span>Git</span>
+              </div>
+              <div class="skill-box">
+                <i class="fab fa-docker"></i>
+                <span>Docker</span>
+              </div>
+              <div class="skill-box">
+                <i class="fab fa-aws"></i>
+                <span>AWS</span>
+              </div>
+              <div class="skill-box">
+                <i class="fab fa-linux"></i>
+                <span>Linux</span>
+              </div>
+              <div class="skill-box">
+                <i class="fab fa-npm"></i>
+                <span>NPM</span>
+              </div>
+            </section>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
   <section class="section bg-grey">
     <div class="section-title">
       <h2>services</h2>
@@ -271,33 +556,33 @@
     </div>
     <div class="services-center section-center">
       <article class="service">
-        <i class="fab fa-sketch service-icon"></i>
+        <i class="fab fa-sketch service-icon icon1"></i>
         <h4>Front End</h4>
         <div class="underline"></div>
         <p>
-          Developing front end website architecture. Designing user
-          interactions on web pages. Ensuring responsiveness of applications.
-          Working alongside graphic designers for web design features.
+          Crafting scalable front-end architectures and designing intuitive user interactions for dynamic web
+          experiences. Committed to ensuring application responsiveness across devices while collaborating closely with
+          graphic designers to integrate compelling visual elements seamlessly.
         </p>
       </article>
       <article class="service">
-        <i class="fas fa-code service-icon"></i>
+        <i class="fas fa-code service-icon icon1"></i>
         <h4>Backend</h4>
         <div class="underline"></div>
         <p>
-          Developing back end website applications. Designing and developing
-          APIs. Meeting both technical and consumer needs. Seeing through a
-          project from conception to finished product.
+          Building robust backend systems with a focus on scalable architecture and efficient data management. Designing
+          and implementing APIs, optimizing performance, and ensuring seamless integration with front-end applications,
+          all while adhering to best practices and collaborating with cross-functional teams.
         </p>
       </article>
       <article class="service">
-        <i class="fas fa-database service-icon"></i>
+        <i class="fas fa-database service-icon icon1"></i>
         <h4>Database</h4>
         <div class="underline"></div>
         <p>
-          Design and deployment of database. Familiarity with database
-          technology such as MySQL, Oracle, and MongoDB. Developing and
-          managing databases and applications
+          Proficient in crafting and managing databases with PostgreSQL, MySQL, and MongoDB. Experienced in designing
+          scalable schemas, fine-tuning query performance, and implementing robust data strategies to drive application
+          efficiency and reliability.
         </p>
       </article>
       <!-- end of single service -->
@@ -629,9 +914,56 @@
 
     <p>© <span id="date">2024</span> ashish jha. all rights reserved</p>
   </footer>
+  <script>
+    // Emoji array containing 5 different emojis
+    const emojis = ['😎', '😂', '😍', '🤔', '🥳'];
+    let currentEmojiIndex = 0;
+
+    // Function to change emoji every 3 seconds
+    function changeEmoji() {
+      currentEmojiIndex = (currentEmojiIndex + 1) % emojis.length;
+      document.getElementById('reactionEmoji').textContent = emojis[currentEmojiIndex];
+    }
+
+    // Change emoji every 3 seconds
+    setInterval(changeEmoji, 3000);
+
+    // Function to generate small emojis
+    function generateSmallEmojis() {
+      const reactionEmoji = document.getElementById('reactionEmoji');
+      const rect = reactionEmoji.getBoundingClientRect();
+      const currentEmoji = emojis[currentEmojiIndex]; // Get current emoji
+
+      for (let i = 0; i < 10; i++) {
+        const smallEmoji = document.createElement('div');
+        smallEmoji.classList.add('small-emoji');
+        smallEmoji.textContent = currentEmoji; // Use the current emoji
+        document.body.appendChild(smallEmoji);
+
+        // Set random direction for the emoji explosion
+        const randomX = Math.random();
+        const randomY = Math.random();
+        smallEmoji.style.setProperty('--randomX', randomX);
+        smallEmoji.style.setProperty('--randomY', randomY);
+
+        // Position small emojis near the reaction emoji
+        smallEmoji.style.left = `${rect.left + window.scrollX + 30}px`;
+        smallEmoji.style.top = `${rect.top + window.scrollY}px`;
+
+        // Remove small emoji after 3 seconds
+        setTimeout(() => {
+          smallEmoji.remove();
+        }, 3000);
+      }
+    }
+
+    // Add click event listener to the main emoji
+    document.getElementById('reactionEmoji').addEventListener('click', generateSmallEmojis);
+
+
+
+  </script>
   <script src="./Ashish Jha __ Home_files/app.js"></script>
-
-
 
 </body>
 
