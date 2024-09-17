@@ -6,7 +6,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ashish Jha | 😎</title>
+  <title>Ashish Jha</title>
   <!-- font-awesome -->
   <link href="./Ashish Jha __ Home_files/all.min.css" rel="stylesheet">
   <!-- css -->
@@ -211,7 +211,8 @@
     transform: translateX(0);
     transition: all 0.5s ease-in-out;
   }
-  .skills-card:hover{
+
+  .skills-card:hover {
     filter: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));
     cursor: pointer;
   }
@@ -249,6 +250,7 @@
     margin: 10px;
     transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
   }
+
   .skill-box span {
     font-size: 14px;
     font-weight: 600;
@@ -268,14 +270,18 @@
   .skill-box:hover i {
     transform: scale(1.2);
   }
+
   .nav-logo {
-      position: fixed;
-      top: 10px; /* Adjust as needed */
-      left: 24px; /* Adjust as needed */
-      width: 60px;
-      height: 60px;
-      z-index: 1000; /* Ensure it stays on top of other elements */
-    }
+    position: fixed;
+    top: 10px;
+    /* Adjust as needed */
+    left: 24px;
+    /* Adjust as needed */
+    width: 60px;
+    height: 60px;
+    z-index: 1000;
+    /* Ensure it stays on top of other elements */
+  }
 </style>
 </head>
 
@@ -308,7 +314,7 @@
     </div>
   </nav> -->
   <a href="https://ashishjha.co.in/"><img src="./Ashish Jha __ Home_files/logo.webp" width="60px" height="60px"
-    class="nav-logo" alt="nav logo"></a>
+      class="nav-logo" alt="nav logo"></a>
 
   <!-- sidebar -->
   <!-- <aside class="sidebar" id="sidebar">
@@ -363,7 +369,7 @@
       </ul>
     </div>
   </aside> -->
- 
+
   <!-- end of sidebar -->
   <!-- header -->
   <header class="hero">
@@ -402,7 +408,7 @@
       <div class="wave"></div>
     </div>
     <!-- Reaction Emoji -->
-    <div class="reaction-emoji" id="reactionEmoji"  title="Surprise Click">😎</div>
+    <div class="reaction-emoji" id="reactionEmoji" title="Surprise Click">😎</div>
 
   </header>
   <!-- end of header -->
@@ -923,57 +929,7 @@
 
     <p>© <span id="date">2024</span> ashish jha. all rights reserved</p>
   </footer>
-  <script>
-    // Emoji array containing 5 different emojis
-    const emojis = ['😎', '😂', '😍', '🤔', '🥳','🐧'];
-    let currentEmojiIndex = 0;
-
-    // Function to change emoji every 3 seconds
-    function changeEmoji() {
-      currentEmojiIndex = (currentEmojiIndex + 1) % emojis.length;
-      document.getElementById('reactionEmoji').textContent = emojis[currentEmojiIndex];
-    }
-
-    // Change emoji every 3 seconds
-    setInterval(changeEmoji, 3000);
-
-    // Function to generate small emojis
-    function generateSmallEmojis() {
-      const reactionEmoji = document.getElementById('reactionEmoji');
-      const rect = reactionEmoji.getBoundingClientRect();
-      const currentEmoji = emojis[currentEmojiIndex]; // Get current emoji
-
-      for (let i = 0; i < 10; i++) {
-        const smallEmoji = document.createElement('div');
-        smallEmoji.classList.add('small-emoji');
-        smallEmoji.textContent = currentEmoji; // Use the current emoji
-        document.body.appendChild(smallEmoji);
-
-        // Set random direction for the emoji explosion
-        const randomX = Math.random();
-        const randomY = Math.random();
-        smallEmoji.style.setProperty('--randomX', randomX);
-        smallEmoji.style.setProperty('--randomY', randomY);
-
-        // Position small emojis near the reaction emoji
-        smallEmoji.style.left = `${rect.left + window.scrollX + 30}px`;
-        smallEmoji.style.top = `${rect.top + window.scrollY}px`;
-
-        // Remove small emoji after 3 seconds
-        setTimeout(() => {
-          smallEmoji.remove();
-        }, 3000);
-      }
-    }
-
-    // Add click event listener to the main emoji
-    document.getElementById('reactionEmoji').addEventListener('click', generateSmallEmojis);
-
-
-
-  </script>
   <script src="./Ashish Jha __ Home_files/app.js"></script>
-
 </body>
 
 </html>
