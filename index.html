@@ -282,6 +282,151 @@
     z-index: 1000;
     /* Ensure it stays on top of other elements */
   }
+
+  .experience {
+    background: linear-gradient(45deg, #fe5a59, #8205ff);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    animation: shine 3s linear infinite;
+  }
+
+  @keyframes shine {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+
+  .exp-sec {
+    background-color: #f4f2ee;
+  }
+
+  .exper-content {
+    padding: 2rem 5rem;
+  }
+
+  .exper-content h3 {
+    color: #006400;
+    position: relative;
+    display: inline-block;
+  }
+
+  .exper-content h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    /* Adjust as needed */
+    width: 0;
+    height: 2px;
+    /* Adjust as needed */
+    background: linear-gradient(45deg, #fe5a59, #8205ff);
+    animation: expandBorder 2.5s ease-in-out forwards infinite;
+  }
+
+  @keyframes expandBorder {
+    0% {
+      width: 0;
+    }
+
+    100% {
+      width: 100%;
+    }
+  }
+
+  .dates {
+    color: #687077;
+    font-size: 0.875rem;
+    font-weight: normal;
+    background-color: #dedbd6;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  @keyframes expandBorder {
+    0% {
+      width: 0;
+    }
+
+    100% {
+      width: 100%;
+    }
+  }
+
+  .dates {
+    color: #687077;
+    font-size: 0.875rem;
+    font-weight: normal;
+    background-color: #dedbd6;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .list li {
+    background: #ffffff;
+    /* White background for a cleaner look */
+    border: 1px solid #e0e0e0;
+    /* Light border color */
+    border-radius: 8px;
+    /* Slightly more rounded corners */
+    padding: 15px 20px;
+    /* Adjusted padding for better spacing */
+    margin: 10px 0;
+    /* Space between list items */
+    font-size: 1rem;
+    /* Font size */
+    color: #333;
+    /* Text color */
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+    transition: transform 0.2s, box-shadow 0.2s;
+    /* Smooth transition for hover effect */
+  }
+
+  .list li::before {
+    content: '\2022';
+    /* Unicode for bullet point */
+    color: #fe5a59;
+    /* Bullet color */
+    font-weight: bold;
+    /* Bullet weight */
+    display: inline-block;
+    width: 1em;
+    margin-right: 10px;
+    /* Space between bullet and text */
+  }
+
+  .list li:hover {
+    transform: translateY(-5px);
+    /* Slight lift on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    /* Stronger shadow on hover */
+  }
+
+  .fa-external-link-alt {
+    font-size: 0.75rem;
+    /* Smaller font size */
+    vertical-align: top;
+    /* Align to the top */
+    margin-left: 5px;
+    /* Add some space to the left of the icon */
+  }
 </style>
 </head>
 
@@ -447,9 +592,16 @@
   <section class="section skills">
     <div class="section-center" style="width: 100%; justify-content: start;align-items: center;display: flex;">
       <article class="about-info">
-        <div class="section-title about-title ">
-          <h2>My tech stack</h2>
-          <div class="underline"></div>
+        <div class="section-title about-title  "
+          style="display: flex; justify-content: space-between;align-items: center;">
+          <div class="">
+            <h2>My tech stack</h2>
+            <div class="underline"></div>
+          </div>
+          <div class="panda">
+            <img src="./Ashish Jha __ Home_files/panda.gif" alt="Hi_Panda" width="85px"
+              style="width: 85px;height: 85px;">
+          </div>
         </div>
 
         <div class="skills-section" id="skills-section">
@@ -475,6 +627,10 @@
               <div class="skill-box">
                 <i class="fab fa-react"></i>
                 <span>React</span>
+              </div>
+              <div class="skill-box">
+                <i class="fas fa-sync-alt"></i>
+                <span>Redux </span>
               </div>
               <div class="skill-box">
                 <i class="fab fa-angular"></i>
@@ -507,6 +663,10 @@
                 <i class="fas fa-database"></i>
                 <span>Hibernate</span>
               </div>
+              <div class="skill-box">
+                <i class="fas fa-lock"></i>
+                <span>Spring <br> Security</span>
+              </div>
             </section>
           </div>
 
@@ -530,6 +690,10 @@
                 <i class="fas fa-database"></i>
                 <span>Mongoose</span>
               </div>
+              <div class="skill-box">
+                <i class="fas fa-database"></i>
+                <span>Redis</span>
+              </div>
             </section>
           </div>
 
@@ -544,6 +708,10 @@
               <div class="skill-box">
                 <i class="fab fa-docker"></i>
                 <span>Docker</span>
+              </div>
+              <div class="skill-box">
+                <i class="fas fa-stream"></i>
+                <span>Kafka</span>
               </div>
               <div class="skill-box">
                 <i class="fab fa-aws"></i>
@@ -603,10 +771,44 @@
       <!-- end of single service -->
     </div>
   </section>
-  <!-- end of services -->
-  <!-- projects -->
+
+  <section class="section projects exp-sec">
+
+    <div class="section-title">
+      <h2 class="experience">Experience</h2>
+    </div>
+
+    <div class="exper-content">
+      <h3>Software Intern | <a href="https://www.novoinvent.com/" target="_blank">NovoInvent Software <i
+            class="fas fa-external-link-alt"></i></a></h3>
+        <div class="dates">March 2023 - May 2024</div>
+        <ul class="list">
+          <li>Assisted in the development of web applications using Angular and Node.js, collaborating closely with
+            senior
+            engineers to enhance existing features.</li>
+          <li>Implemented RESTful APIs for data retrieval and manipulation, improving efficiency and reducing response
+            times by 20%.</li>
+          <li>Conducted testing and debugging of code to ensure seamless user experiences across different platforms.
+          </li>
+          <li>Gained hands-on experience in shell scripting like linux and version control using Git.</li>
+        </ul>
+    </div>
+    <div class="exper-content">
+      <h3>Software Engineer | <a href="https://www.novoinvent.com/" target="_blank">NovoInvent Software <i
+            class="fas fa-external-link-alt"></i></a></h3>
+      <div class="dates">June 2024 - Present</div>
+      <ul class="list">
+        <li>Actively involved in full-stack development projects, utilizing Java, Spring Boot, and MySQL to build
+          robust, scalable backend systems.</li>
+        <li>Developed reusable components and optimized code to improve application performance by 15%.</li>
+        <li>Collaborated in an Agile team, contributing to sprint planning, code reviews, and feature development.</li>
+        <li>Played a key role in deploying applications to production environments, ensuring minimal downtime.</li>
+      </ul>
+    </div>
+  </section>
+
+
   <section class="section projects">
-    <!-- section title -->
     <div class="section-title">
       <h2>latest works</h2>
       <div class="underline"></div>
@@ -658,8 +860,7 @@
       <!-- end of single project -->
     </div>
   </section>
-  <!-- end of projects -->
-  <!-- connect -->
+
   <section class="connect">
     <video controls="" autoplay="" muted="" loop="" class="video-container" poster="./images/handshake.jpg">
       <source
