@@ -290,8 +290,24 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+    color: linear-gradient(45deg, #fe5a59, #8205ff);
     animation: shine 3s linear infinite;
   }
+
+  .experience::after {
+    content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2.2px;
+      background: linear-gradient(45deg, #fe5a59, #8205ff);
+      animation: expandBorder 2.5s ease-in-out forwards infinite;
+  }
+
 
   @keyframes shine {
     0% {
@@ -774,24 +790,28 @@
 
   <section class="section projects exp-sec">
 
-    <div class="section-title">
+    <div class="section-title exp-title" style="display: flex ; justify-content: center; align-items:end; gap: 20px;">
       <h2 class="experience">Experience</h2>
+      <div>
+        <img src="./Ashish Jha __ Home_files/tree.gif" alt="tree"
+          style="width:  55px; height: 60px; margin-bottom: 10px;">
+      </div>
     </div>
 
     <div class="exper-content">
       <h3>Software Intern | <a href="https://www.novoinvent.com/" target="_blank">NovoInvent Software <i
             class="fas fa-external-link-alt"></i></a></h3>
-        <div class="dates">March 2023 - May 2024</div>
-        <ul class="list">
-          <li>Assisted in the development of web applications using Angular and Node.js, collaborating closely with
-            senior
-            engineers to enhance existing features.</li>
-          <li>Implemented RESTful APIs for data retrieval and manipulation, improving efficiency and reducing response
-            times by 20%.</li>
-          <li>Conducted testing and debugging of code to ensure seamless user experiences across different platforms.
-          </li>
-          <li>Gained hands-on experience in shell scripting like linux and version control using Git.</li>
-        </ul>
+      <div class="dates">March 2023 - May 2024</div>
+      <ul class="list">
+        <li>Assisted in the development of web applications using Angular and Node.js, collaborating closely with
+          senior
+          engineers to enhance existing features.</li>
+        <li>Implemented RESTful APIs for data retrieval and manipulation, improving efficiency and reducing response
+          times by 20%.</li>
+        <li>Conducted testing and debugging of code to ensure seamless user experiences across different platforms.
+        </li>
+        <li>Gained hands-on experience in shell scripting like linux and version control using Git.</li>
+      </ul>
     </div>
     <div class="exper-content">
       <h3>Software Engineer | <a href="https://www.novoinvent.com/" target="_blank">NovoInvent Software <i
