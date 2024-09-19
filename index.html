@@ -19,431 +19,7 @@
   <link rel="manifest" href="./Ashish Jha __ Home_files/site.webmanifest">
 </head>
 <!-- Style -->
-<style>
-  html,
-  body {
-    overflow-x: hidden;
-  }
 
-  .hero,
-  .nav {
-    background-color: #f4f2ee;
-    height: 100vh !important;
-  }
-
-  .nav-logo {
-    border-radius: 50%;
-    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-    transition: transform 0.3s ease-in-out;
-  }
-
-  .nav-logo:hover {
-    transform: scale(1.25);
-  }
-
-  .hero-photos {
-    max-width: 25rem;
-    height: 35rem;
-    -o-object-fit: cover;
-    object-fit: cover;
-    border-radius: var(--radius);
-    position: relative;
-  }
-
-  .index-neumorph {
-    background-color: transparent !important;
-  }
-
-  .about-img {
-    position: relative;
-    animation: bubble 2s ease-in-out infinite;
-    transition: left 2s ease-in;
-  }
-
-  .about-img:hover::before {
-    left: -3rem;
-  }
-
-  @keyframes bubble {
-    0% {
-      transform: translateY(0);
-    }
-
-    50% {
-      transform: translateY(-20px);
-    }
-
-    100% {
-      transform: translateY(0);
-    }
-  }
-
-  .social-icon {
-    transition: transform 0.3s ease-in-out;
-  }
-
-  .social-icon:hover {
-    transform: scale(1.2);
-  }
-
-  .wrapper {
-    width: 100vw;
-    height: 100vh;
-    position: relative;
-    border-radius: 5px;
-    background-image: linear-gradient(to top, #e0ddd8 0%, #d3d0cb 100%);
-    overflow: hidden;
-  }
-
-  .wave {
-    width: 77rem;
-    height: 89rem;
-    position: absolute;
-    top: -25%;
-    left: 50%;
-    margin-left: -500px;
-    margin-top: -500px;
-    border-radius: 35%;
-    background: #f4f2ee;
-    animation: wave 15s infinite linear;
-  }
-
-  @keyframes wave {
-    from {
-      transform: rotate(0deg);
-    }
-
-    from {
-      transform: rotate(360deg);
-    }
-  }
-
-  /* Reaction Emoji at the bottom-left corner */
-  .reaction-emoji {
-    position: fixed;
-    bottom: 30px;
-    left: 30px;
-    font-size: 60px;
-    cursor: pointer;
-    animation: bounce 2s infinite;
-    z-index: 100;
-    user-select: none;
-  }
-
-  /* Small emojis generated on click */
-  .small-emoji {
-    position: absolute;
-    font-size: 20px;
-    opacity: 0;
-    animation: flyAway 3s forwards ease-out;
-  }
-
-  @keyframes flyAway {
-    0% {
-      transform: translate(0, 0) scale(1);
-      opacity: 1;
-    }
-
-    100% {
-      transform: translate(calc(200px - 400px * var(--randomX)), calc(-200px * var(--randomY))) scale(0.5);
-      opacity: 0;
-    }
-  }
-
-  /* Bounce animation for the main emoji */
-  @keyframes bounce {
-
-    0%,
-    100% {
-      transform: translateY(0);
-    }
-
-    50% {
-      transform: translateY(-20px);
-    }
-  }
-
-  .skills {
-    background-color: #fffaeb;
-  }
-
-  @keyframes bounce {
-
-    0%,
-    20%,
-    50%,
-    80%,
-    100% {
-      transform: translateY(0);
-    }
-
-    40% {
-      transform: translateY(-10px);
-    }
-
-    60% {
-      transform: translateY(-5px);
-    }
-  }
-
-  .icon1 {
-    display: inline-block;
-    animation: bounce 2s infinite;
-  }
-
-  .skills-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 20px 0;
-  }
-
-  .skills-card {
-    background-color: #fffaeb;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    padding: 20px;
-    margin: 10px;
-    width: calc(50% - 40px);
-    /* Adjust width to fit two cards per row */
-    box-sizing: border-box;
-    opacity: 0;
-    transform: translateX(0);
-    transition: all 0.5s ease-in-out;
-  }
-
-  .skills-card:hover {
-    filter: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));
-    cursor: pointer;
-  }
-
-  .skills-card.slide-left {
-    transform: translateX(-100%);
-  }
-
-  .skills-card.slide-right {
-    transform: translateX(100%);
-  }
-
-  .skills-card.in-view {
-    opacity: 1;
-    transform: translateX(0);
-  }
-
-  .skills {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-  }
-
-  .skill-box {
-    background-color: rgba(193, 192, 189, 0.477);
-    color: darkgreen;
-    width: 100px;
-    height: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 8px;
-    text-align: center;
-    margin: 10px;
-    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
-  }
-
-  .skill-box span {
-    font-size: 14px;
-    font-weight: 600;
-    color: #513c06;
-  }
-
-  .skill-box i {
-    font-size: 24px;
-    margin-bottom: 5px;
-    transition: transform 0.3s ease-in-out;
-  }
-
-  .skill-box:hover i {
-    color: #fff;
-  }
-
-  .skill-box:hover i {
-    transform: scale(1.2);
-  }
-
-  .nav-logo {
-    position: fixed;
-    top: 10px;
-    /* Adjust as needed */
-    left: 24px;
-    /* Adjust as needed */
-    width: 60px;
-    height: 60px;
-    z-index: 1000;
-    /* Ensure it stays on top of other elements */
-  }
-
-  .experience {
-    background: linear-gradient(45deg, #fe5a59, #8205ff);
-    background-size: 200% 200%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
-    overflow: hidden;
-    display: inline-block;
-    position: relative;
-    color: linear-gradient(45deg, #fe5a59, #8205ff);
-    animation: shine 3s linear infinite;
-  }
-
-  .experience::after {
-    content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 2.2px;
-      background: linear-gradient(45deg, #fe5a59, #8205ff);
-      animation: expandBorder 2.5s ease-in-out forwards infinite;
-  }
-
-
-  @keyframes shine {
-    0% {
-      background-position: 0% 50%;
-    }
-
-    100% {
-      background-position: 100% 50%;
-    }
-  }
-
-  .exp-sec {
-    background-color: #f4f2ee;
-  }
-
-  .exper-content {
-    padding: 2rem 5rem;
-  }
-
-  .exper-content h3 {
-    color: #006400;
-    position: relative;
-    display: inline-block;
-  }
-
-  .exper-content h3::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    /* Adjust as needed */
-    width: 0;
-    height: 2px;
-    /* Adjust as needed */
-    background: linear-gradient(45deg, #fe5a59, #8205ff);
-    animation: expandBorder 2.5s ease-in-out forwards infinite;
-  }
-
-  @keyframes expandBorder {
-    0% {
-      width: 0;
-    }
-
-    100% {
-      width: 100%;
-    }
-  }
-
-  .dates {
-    color: #687077;
-    font-size: 0.875rem;
-    font-weight: normal;
-    background-color: #dedbd6;
-    width: fit-content;
-    padding: 10px;
-    border-radius: 10px;
-  }
-
-  @keyframes expandBorder {
-    0% {
-      width: 0;
-    }
-
-    100% {
-      width: 100%;
-    }
-  }
-
-  .dates {
-    color: #687077;
-    font-size: 0.875rem;
-    font-weight: normal;
-    background-color: #dedbd6;
-    width: fit-content;
-    padding: 10px;
-    border-radius: 10px;
-  }
-
-  .list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .list li {
-    background: #ffffff;
-    /* White background for a cleaner look */
-    border: 1px solid #e0e0e0;
-    /* Light border color */
-    border-radius: 8px;
-    /* Slightly more rounded corners */
-    padding: 15px 20px;
-    /* Adjusted padding for better spacing */
-    margin: 10px 0;
-    /* Space between list items */
-    font-size: 1rem;
-    /* Font size */
-    color: #333;
-    /* Text color */
-    display: flex;
-    align-items: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow for depth */
-    transition: transform 0.2s, box-shadow 0.2s;
-    /* Smooth transition for hover effect */
-  }
-
-  .list li::before {
-    content: '\2022';
-    /* Unicode for bullet point */
-    color: #fe5a59;
-    /* Bullet color */
-    font-weight: bold;
-    /* Bullet weight */
-    display: inline-block;
-    width: 1em;
-    margin-right: 10px;
-    /* Space between bullet and text */
-  }
-
-  .list li:hover {
-    transform: translateY(-5px);
-    /* Slight lift on hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    /* Stronger shadow on hover */
-  }
-
-  .fa-external-link-alt {
-    font-size: 0.75rem;
-    /* Smaller font size */
-    vertical-align: top;
-    /* Align to the top */
-    margin-left: 5px;
-    /* Add some space to the left of the icon */
-  }
-</style>
 </head>
 
 <body>
@@ -452,7 +28,7 @@
     <div class="nav-center">
 
       <div class="nav-header">
-        <a href="https://ashishjha.co.in/"><img src="./Ashish Jha __ Home_files/logo.webp" width="60px" height="60px"
+        <a href="https://ashish5jha.github.io/portfolio/"><img src="./Ashish Jha __ Home_files/logo.webp" width="60px" height="60px"
             class="nav-logo" alt="nav logo"></a>
         <button class="nav-btn" id="nav-btn">
           <i class="fas fa-bars"></i>
@@ -460,22 +36,30 @@
       </div>
       <ul class="nav-links">
         <li>
-          <a href="https://ashishjha.co.in/">.home</a>
+          <a href="https://ashish5jha.github.io/portfolio/">.home</a>
         </li>
         <li>
-          <a href="https://ashishjha.co.in/about">.about</a>
+          <a href="https://ashish5jha.github.io/portfolio/about">.about</a>
         </li>
         <li>
-          <a href="https://ashishjha.co.in/projects">.projects</a>
+          <a href="https://ashish5jha.github.io/portfolio/projects">.projects</a>
         </li>
         <li>
-          <a href="https://ashishjha.co.in/contact">.contact</a>
+          <a href="https://ashish5jha.github.io/portfolio/contact">.contact</a>
         </li>
       </ul>
     </div>
   </nav> -->
-  <a href="https://ashishjha.co.in/"><img src="./Ashish Jha __ Home_files/logo.webp" width="60px" height="60px"
-      class="nav-logo" alt="nav logo"></a>
+  <a href="https://ashish5jha.github.io/portfolio/"><img src="./Ashish Jha __ Home_files/logo.webp" width="60px"
+      height="60px" class="nav-logo" alt="nav logo"></a>
+
+  <!-- Resume Button -->
+  <button href="#" class="button" style="--clr: #7808d0" onclick="getResume()">
+    <span class="download"> <img src="./Ashish Jha __ Home_files/download.png" alt="download"></span>
+    Resume
+  </button>
+
+
 
   <!-- sidebar -->
   <!-- <aside class="sidebar" id="sidebar">
@@ -486,19 +70,19 @@
       <ul class="sidebar-links">
         <li class="li-style">
           <i class="fas fa-home sidebar-icon"></i>
-          <a href="https://ashishjha.co.in/">home</a>
+          <a href="https://ashish5jha.github.io/portfolio/">home</a>
         </li>
         <li class="li-style">
           <i class="fas fa-user-alt sidebar-icon"></i>
-          <a href="https://ashishjha.co.in/about">about</a>
+          <a href="https://ashish5jha.github.io/portfolio/about">about</a>
         </li>
         <li class="li-style">
           <i class="fas fa-file-code sidebar-icon"></i>
-          <a href="https://ashishjha.co.in/projects">projects</a>
+          <a href="https://ashish5jha.github.io/portfolio/projects">projects</a>
         </li>
         <li class="li-style">
           <i class="fas fa-envelope sidebar-icon"></i>
-          <a href="https://ashishjha.co.in/contact">contact</a>
+          <a href="https://ashish5jha.github.io/portfolio/contact">contact</a>
         </li>
       </ul>
       <ul class="social-icons">
@@ -556,7 +140,7 @@
               </a>
             </li>
             <li class="index-neumorph">
-              <a href="https://x.com/AshishJha57" class="social-icon" target="_blank">
+              <a href="https://x.com/Ashish5Jha" class="social-icon" target="_blank">
                 <i class="fab fa-twitter"></i>
               </a>
             </li>
@@ -601,7 +185,7 @@
           technologies to stay ahead in this fast-evolving field.
         </p>
 
-        <a class="btn" href="https://ashishjha.co.in/about">about me</a>
+        <a class="btn" href="https://ashish5jha.github.io/portfolio/about">about me</a>
       </article>
     </div>
   </section>
@@ -621,7 +205,7 @@
         </div>
 
         <div class="skills-section" id="skills-section">
-          <div class="skills-card slide-left">
+          <div class="skills-card ">
             <h3 style="color: darkgreen;">Frontend</h3>
             <section class="skills">
               <div class="skill-box">
@@ -656,7 +240,7 @@
           </div>
 
           <!-- Backend Section -->
-          <div class="skills-card slide-right">
+          <div class="skills-card">
             <h3 style="color: darkgreen;">Backend</h3>
             <section class="skills">
               <div class="skill-box">
@@ -687,7 +271,7 @@
           </div>
 
           <!-- Database Section -->
-          <div class="skills-card slide-left">
+          <div class="skills-card">
             <h3 style="color: darkgreen;">Database</h3>
             <section class="skills">
               <div class="skill-box">
@@ -714,7 +298,7 @@
           </div>
 
           <!-- Tools Section -->
-          <div class="skills-card slide-right">
+          <div class="skills-card">
             <h3 style="color: darkgreen;">Tools</h3>
             <section class="skills">
               <div class="skill-box">
@@ -841,7 +425,7 @@
     <!--end of section title -->
     <div class="section-center projects-center">
       <!-- single project -->
-      <a class="project-1" href="https://ashishjha.co.in/projects">
+      <a class="project-1" href="https://ashish5jha.github.io/portfolio/projects">
         <article class="project">
           <img src="./Ashish Jha __ Home_files/stock.png" alt="single project" class="project-img">
           <div class="project-info">
@@ -851,7 +435,7 @@
       </a>
       <!-- end of single project -->
       <!-- single project -->
-      <a class="project-2" href="https://ashishjha.co.in/projects">
+      <a class="project-2" href="https://ashish5jha.github.io/portfolio/projects">
         <article class="project">
           <img src="./Ashish Jha __ Home_files/dubstep.png" alt="single project" class="project-img">
           <div class="project-info">
@@ -860,7 +444,7 @@
         </article>
       </a>
       <!-- end of single project --><!-- single project -->
-      <a class="project-3" href="https://ashishjha.co.in/projects">
+      <a class="project-3" href="https://ashish5jha.github.io/portfolio/projects">
         <article class="project">
           <img src="./Ashish Jha __ Home_files/quiz.png" alt="single project" class="project-img">
           <div class="project-info">
@@ -869,7 +453,7 @@
         </article>
       </a>
       <!-- end of single project --><!-- single project -->
-      <a class="project-4" href="https://ashishjha.co.in/projects">
+      <a class="project-4" href="https://ashish5jha.github.io/portfolio/projects">
         <article class="project">
           <img src="./Ashish Jha __ Home_files/theme.png" alt="single project" class="project-img">
           <div class="project-info">
@@ -899,7 +483,7 @@
         Want to get in touch with me? It's very simple just click the button,
         a Genie will convey your message to me.
       </p>
-      <a class="btn" href="https://ashishjha.co.in/contact">contact me</a>
+      <a class="btn" href="https://ashish5jha.github.io/portfolio/contact">contact me</a>
     </div>
   </section>
   <!-- end of connect -->
@@ -1110,7 +694,7 @@
     <!-----Button----->
     <br><br>
     <center>
-      <a class="btn" href="https://ashishjha.co.in/projects">Projects</a>
+      <a class="btn" href="https://ashish5jha.github.io/portfolio/projects">Projects</a>
     </center>
     <!---End of button---->
   </section>
