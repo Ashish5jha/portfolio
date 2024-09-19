@@ -4,7 +4,7 @@ const date = document.querySelector("#date");
 // Set the current year
 date.innerHTML = new Date().getFullYear();
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const emojis = ['😎', '😂', '😍', '🤔', '🥳', '🐧'];
   let currentIndex = 0;
   let emojiInterval;
@@ -51,42 +51,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
-  // Add hover event listeners to the main emoji
-  const reactionEmoji = document.getElementById('reactionEmoji');
-  reactionEmoji.addEventListener('mouseover', () => {
-    emojiInterval = setInterval(generateSmallEmojis, 300); // Generate emojis every 300ms
-  });
-
-  reactionEmoji.addEventListener('mouseout', () => {
-    clearInterval(emojiInterval); // Stop generating emojis
-  });
-
-  // Function to set up Intersection Observer
-  function setupIntersectionObserver(targets, options) {
-    const observerCallback = (entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('in-view');
-        } else {
-          entry.target.classList.remove('in-view');
-        }
-      });
-    };
-
-    const observer = new IntersectionObserver(observerCallback, options);
-
-    targets.forEach(target => {
-      observer.observe(target);
-    });
-  }
-
-  const skillsCards = document.querySelectorAll('.skills-card');
-  const observerOptions = {
-    threshold: 0.3 
-  };
-
-  // Set up the observer for the selected elements
-  setupIntersectionObserver(skillsCards, observerOptions);
 
   // Function to change emoji every 3 seconds
   function changeEmoji() {
@@ -97,3 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Change emoji every 3 seconds
   setInterval(changeEmoji, 3000);
 });
+// Praashoo7/quick-fish-43
+function getResume() {
+  window.open('https://www.shopify.com/stock-photos/photos/hiker-looks-out-over-bay-surrounded-by-mountains?c=village', '_blank'); // Replace with your desired URL
+}
