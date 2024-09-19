@@ -51,8 +51,16 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
+  // Add hover event listeners to the main emoji
+  const reactionEmoji = document.getElementById('reactionEmoji');
+  reactionEmoji.addEventListener('mouseover', () => {
+    emojiInterval = setInterval(generateSmallEmojis, 300); // Generate emojis every 300ms
+  });
 
-  // Function to change emoji every 3 seconds
+  reactionEmoji.addEventListener('mouseout', () => {
+    clearInterval(emojiInterval); // Stop generating emojis
+  });
+
   function changeEmoji() {
     currentIndex = (currentIndex + 1) % emojis.length;
     document.getElementById('reactionEmoji').textContent = emojis[currentIndex];
