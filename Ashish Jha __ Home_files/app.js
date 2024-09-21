@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // Change emoji every 3 seconds
   setInterval(changeEmoji, 3000);
 });
-// Praashoo7/quick-fish-43
+
 function getResume() {
   window.open('https://www.shopify.com/stock-photos/photos/hiker-looks-out-over-bay-surrounded-by-mountains?c=village', '_blank'); // Replace with your desired URL
 }

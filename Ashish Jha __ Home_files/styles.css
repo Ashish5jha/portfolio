@@ -1219,7 +1219,7 @@ body {
     overflow: hidden;
 }
 
-.wave {
+.waves {
     width: 77rem;
     height: 89rem;
     position: absolute;
@@ -1229,10 +1229,10 @@ body {
     margin-top: -500px;
     border-radius: 35%;
     background: #f4f2ee;
-    animation: wave 15s infinite linear;
+    animation: waves 15s infinite linear;
 }
 
-@keyframes wave {
+@keyframes waves {
     from {
         transform: rotate(0deg);
     }
@@ -1555,6 +1555,7 @@ body {
     margin-left: 5px;
     /* Add some space to the left of the icon */
 }
+
 .button {
     line-height: 1;
     text-decoration: none;
@@ -1563,7 +1564,7 @@ body {
     cursor: pointer;
     align-items: center;
     gap: 0.75rem;
-    background-color:transparent;
+    background-color: transparent;
     color: #006400;
     border-radius: 10rem;
     font-weight: 600;
@@ -1581,9 +1582,271 @@ body {
 }
 
 .button:active {
-    box-shadow: inset 8px 8px 16px #bebebe, inset -8px -8px 16px #ffffff; 
+    box-shadow: inset 8px 8px 16px #bebebe, inset -8px -8px 16px #ffffff;
 }
+
 .button .download {
-    height: 20px; width: 20px;
+    height: 20px;
+    width: 20px;
     animation: bounce 2s infinite;
 }
+
+.e-card {
+    margin: 100px auto;
+    background: transparent;
+    box-shadow: 0px 8px 28px -9px rgba(0, 0, 0, 0.45);
+    position: relative;
+    width: 85%;
+    height: 600px;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.wave {
+    position: absolute;
+    width: 100vw;
+    height: 90rem;
+    opacity: 0.55;
+    left: 0;
+    top: 0;
+    margin: -8% 0 17% -10%;
+    background: linear-gradient(800deg, #4ec4ff, #8205ff 60%, #00ddeb);
+}
+
+.icon {
+    width: 3em;
+    margin-top: -1em;
+    padding-bottom: 1em;
+}
+
+.infotop {
+    text-align: center;
+    font-size: 20px;
+    position: absolute;
+    top: 5.6em;
+    left: 0;
+    right: 0;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+}
+
+.name {
+    font-size: 14px;
+    font-weight: 100;
+    position: relative;
+    top: 1em;
+    text-transform: lowercase;
+}
+
+
+.wave:nth-child(3) {
+    top: 210px;
+}
+
+.wave:nth-child(2) {
+    top: 190px;
+}
+
+.playing .wave {
+    border-radius: 40%;
+    animation: wave 4000ms infinite linear;
+}
+
+.wave {
+    border-radius: 40%;
+    animation: wave 55s infinite linear;
+}
+
+.playing .wave:nth-child(2) {
+    animation-duration: 4000ms;
+}
+
+.wave:nth-child(2) {
+    animation-duration: 50s;
+}
+
+.playing .wave:nth-child(3) {
+    animation-duration: 7000ms;
+}
+
+.wave:nth-child(3) {
+    animation-duration: 1000s;
+}
+
+@keyframes wave {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    justify-content: center;
+    align-items: center;
+    margin-top:3rem;
+}
+.main i{
+    font-size: 28px;
+    color: #006400;
+
+}
+.sign{
+    width: 180px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    margin: 10px auto;
+    align-items: center;
+}
+
+.up {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+}
+
+.down {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+}
+
+.card1 {
+    width: 90px;
+    height: 90px;
+    outline: none;
+    border: none;
+    background: white;
+    border-radius: 90px 5px 5px 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: .2s ease-in-out;
+}
+
+.instagram {
+    margin-top: 1.5em;
+    margin-left: 1.2em;
+    fill: #cc39a4;
+}
+
+.card2 {
+    width: 90px;
+    height: 90px;
+    outline: none;
+    border: none;
+    background: white;
+    border-radius: 5px 90px 5px 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: .2s ease-in-out;
+}
+
+.twitter {
+    margin-top: 1.5em;
+    margin-left: -.9em;
+    fill: #e9b949;
+}
+
+
+.card3 {
+    width: 90px;
+    height: 90px;
+    outline: none;
+    border: none;
+    background: white;
+    border-radius: 5px 5px 5px 90px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: .2s ease-in-out;
+}
+
+.github {
+    margin-top: -.6em;
+    margin-left: 1.2em;
+}
+
+.card4 {
+    width: 90px;
+    height: 90px;
+    outline: none;
+    border: none;
+    background: white;
+    border-radius: 5px 5px 90px 5px;
+    box-shadow: #e9b949;
+    transition: .2s ease-in-out;
+}
+
+.discord {
+    margin-top: -.9em;
+    margin-left: -1.2em;
+    fill: #8c9eff;
+}
+
+.card1:hover {
+    cursor: pointer;
+    scale: 1.0001;
+    background-color: #fffaeb;
+}
+
+.card1:hover .instagram {
+    fill: white;
+}
+
+.card2:hover {
+    cursor: pointer;
+    scale:1.0001;
+    background-color: #fffaeb;
+}
+
+.card2:hover .twitter {
+    fill: white;
+}
+
+.card3:hover {
+    cursor: pointer;
+    scale: 1.0001;
+    background-color: #fffaeb;
+}
+
+.card3:hover .github {
+    fill: white;
+}
+
+.card4:hover {
+    cursor: pointer;
+    scale: 1.0001;
+    background-color: #fffaeb;
+}
+
+.card4:hover .discord {
+    fill: white;
+}
+
+.contact-box {
+    background-color: #ffffff;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a soft shadow for depth */
+    display: flex;
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Aligns content vertically */
+    gap: 10px; /* Adds space between phone and email */
+    max-width: 500px;
+    margin: 20px auto; /* Centers the box horizontally on the page */
+  }
+  
+  .contact-info {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .separator {
+    font-size: 16px;
+    font-weight: 500;
+    color: #888;
+  }
+  
