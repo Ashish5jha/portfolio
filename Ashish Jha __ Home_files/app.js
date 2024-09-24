@@ -73,3 +73,20 @@ document.addEventListener('DOMContentLoaded', function () {
 function getResume() {
   window.open('https://www.shopify.com/stock-photos/photos/hiker-looks-out-over-bay-surrounded-by-mountains?c=village', '_blank'); // Replace with your desired URL
 }
+document.addEventListener("DOMContentLoaded", function() {
+  const items = document.querySelectorAll(".timeline-item");
+
+  const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              entry.target.classList.add("show");
+          }
+      });
+  }, {
+      threshold: 0.1
+  });
+
+  items.forEach(item => {
+      observer.observe(item);
+  });
+});
