@@ -2232,6 +2232,7 @@ body {
 
 .project-image {
     width: 100%;
+    height: 100% !important;
     height: auto;
     border-radius: 8px;
 }
@@ -2244,29 +2245,55 @@ body {
     background-color: #f9f9f9;
     border-radius: 8px;
 }
-
 .project-button-container {
     display: flex;
+    flex-direction: column; /* Stack buttons vertically */
     gap: 1rem;
     margin-top: 1rem;
+    align-items: center; /* Center the buttons horizontally */
 }
 
 .project-btn {
-    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px; /* Adjust padding for smaller size */
     border: none;
     border-radius: 4px;
     cursor: pointer;
     background-color: darkgreen;
     color: #fff;
-    font-size: 16px;
+    font-size: 14px; /* Adjust font size for smaller size */
     text-align: center;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 12rem; /* Set a fixed width for the buttons */
+    margin: 0  !important;
+}
+
+.project-btn i {
+    margin-right: 8px; /* Space between icon and text */
 }
 
 .project-btn:hover {
     background-color: green;
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
 }
 
+.project-btn.know-more {
+    background-color: #007bff; /* Blue color for Know More button */
+}
+
+.project-btn.know-more:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.project-btn.github {
+    background-color: #24292e; /* Dark gray color for GitHub button */
+}
+
+.project-btn.github:hover {
+    background-color: #000; /* Black on hover */
+}
 .project-tags {
     display: flex;
     flex-wrap: wrap;
