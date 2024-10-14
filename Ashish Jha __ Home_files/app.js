@@ -179,5 +179,5 @@ wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
 wrapper.addEventListener("mouseleave", autoPlay);
 
 function goTo(link) {
-    window.location.href = link;
+    window.open(link, '_blank');
 }
