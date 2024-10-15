@@ -2752,4 +2752,34 @@ body {
     .exper-content {
         padding: 2rem 1rem;
     }
+    
+    .project-row {
+        flex-direction: column;
+    }
+    .socket {
+        width: 269px;
+        height: 188px;
+        position: absolute;
+        margin-left: -50px;
+        top: 1%;
+        opacity: 0.6;
+        margin-top: -150px;
+    }
+    .contact-box{
+        flex-direction: column !important;
+        margin: 20px;
+    }
+    .wave {
+        position: absolute;
+        width: 288vw;
+        height: 105rem;
+        opacity: 0.55;
+        left: -127px;
+        top: -9rem;
+        margin: -2% 0 17% -10%;
+        background: linear-gradient(800deg, #4ec4ff, #8205ff 60%, #00ddeb);
+    }
+    .main{
+        margin-top: 0rem;
+    }
 }
