@@ -176,7 +176,6 @@ p {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    flex-direction: column;
 }
 
 .bg-grey {
@@ -2732,5 +2731,19 @@ body {
         object-fit: cover;
         border-radius: var(--radius);
         position: relative;
+    }
+
+    .section-title {
+        flex-direction: column;
+    }
+    .reaction-emoji {
+        font-size: 30px;
+    }
+    .skills-section{
+        flex-direction: column !important;
+        width: 100% !important;
+    }
+    .skills-card{
+        width: auto !important;
     }
 }
