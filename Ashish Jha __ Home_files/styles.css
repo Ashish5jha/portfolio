@@ -2794,3 +2794,26 @@ body {
         margin-top: 0rem;
     }
 }
+
+@media screen and (min-width:320px) and (max-width:400px) {
+    .wave {
+        position: absolute;
+        width:101rem;
+        height: 90rem;
+        opacity: 0.55;
+        left: -127px;
+        top: -9rem;
+        margin: -2% 0 17% -10%;
+        background: linear-gradient(800deg, #4ec4ff, #8205ff 60%, #00ddeb);
+    }
+    .e-card{
+        margin: 10px auto;
+        background: transparent;
+        box-shadow: 0px 8px 28px -9px rgba(0, 0, 0, 0.45);
+        position: relative;
+        width: 94%;
+        height: 620px;
+        border-radius: 16px;
+        overflow: hidden;
+    }
+}
