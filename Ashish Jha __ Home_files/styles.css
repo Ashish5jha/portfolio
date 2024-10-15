@@ -2746,4 +2746,10 @@ body {
     .skills-card{
         width: auto !important;
     }
+    .service{
+        width: 100%;
+    }
+    .exper-content {
+        padding: 2rem 1rem;
+    }
 }
