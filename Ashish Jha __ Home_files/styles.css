@@ -171,7 +171,12 @@ p {
 
 .section-title {
     margin-bottom: 4rem;
-    text-align: center
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    flex-direction: column;
 }
 
 .bg-grey {
@@ -2700,5 +2705,32 @@ body {
 
     100% {
         background: #353535;
+    }
+}
+
+
+
+/* ------------------------------------mobile view-------------------------------------------------- */
+@media screen and (min-width: 320px) and (max-width: 1200px) {
+    .waves {
+        width: 90rem;
+        height: 61rem;
+        position: absolute;
+        top: -19%;
+        left: 40%;
+        margin-left: -539px;
+        margin-top: -500px;
+        border-radius: 41%;
+        background: #f4f2ee;
+        animation: waves 15s infinite linear;
+    }
+
+    .hero-photos {
+        max-width: 25rem;
+        height: 22rem;
+        -o-object-fit: cover;
+        object-fit: cover;
+        border-radius: var(--radius);
+        position: relative;
     }
 }
