@@ -1063,6 +1063,7 @@ hr.hr-separator {
     height: 100%;
     border-radius: var(--radius);
     -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
     visibility: visible
 }
 
@@ -2241,9 +2242,6 @@ body {
     border-radius: 8px;
 }
 
-.projects-section {
-    /* Your styles for the projects section */
-}
 
 .project-card {
     border: 1px solid #ddd;
@@ -2711,6 +2709,15 @@ body {
 
 /* ------------------------------------mobile view-------------------------------------------------- */
 @media screen and (min-width: 320px) and (max-width: 1200px) {
+    .web-view{
+        display: none;
+    }
+    .mbl-view{
+        display: inherit;
+    }
+    hr{
+        width: 150px !important;
+    }
     .waves {
         width: 90rem;
         height: 61rem;
