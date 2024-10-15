@@ -2736,20 +2736,38 @@ body {
     .section-title {
         flex-direction: column;
     }
+
     .reaction-emoji {
         font-size: 30px;
     }
-    .skills-section{
+
+    .skills-section {
         flex-direction: column !important;
         width: 100% !important;
     }
-    .skills-card{
+
+    .skills-card {
         width: auto !important;
     }
-    .service{
+
+    .service {
         width: 100%;
     }
+
     .exper-content {
         padding: 2rem 1rem;
+    }
+
+    .project-row {
+        flex-direction: column;
+    }
+    .socket {
+        width: 269px;
+        height: 188px;
+        position: absolute;
+        margin-left: -50px;
+        top: 1%;
+        opacity: 0.6;
+        margin-top: -150px;
     }
 }
