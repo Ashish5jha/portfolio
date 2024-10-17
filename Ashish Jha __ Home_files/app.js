@@ -181,3 +181,6 @@ wrapper.addEventListener("mouseleave", autoPlay);
 function goTo(link) {
     window.open(link, '_blank');
 }
+function redirectToPage(id) {
+  window.location.href = `projectsDetails.html`;
+}

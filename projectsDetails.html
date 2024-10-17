@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details - Nav Finder Backend</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .project-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .project-description {
+            margin-top: 20px;
+        }
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 20px;
+        }
+        .tag {
+            background-color: #e0e0e0;
+            border-radius: 4px;
+            padding: 4px 8px;
+            font-size: 14px;
+        }
+        .project-button-container {
+            display: flex;
+            gap: 1rem;
+            margin-top: 20px;
+        }
+        .project-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            background-color: darkgreen;
+            color: #fff;
+            font-size: 14px;
+            text-align: center;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            width: 120px;
+        }
+        .project-btn i {
+            margin-right: 8px;
+        }
+        .project-btn:hover {
+            background-color: green;
+            transform: scale(1.05);
+        }
+        .project-btn.know-more {
+            background-color: #007bff;
+        }
+        .project-btn.know-more:hover {
+            background-color: #0056b3;
+        }
+        .project-btn.github {
+            background-color: #24292e;
+        }
+        .project-btn.github:hover {
+            background-color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="1">
+        <img src="./Ashish Jha __ Home_files/project1.png" alt="Project Image" class="project-image">
+        <div class="project-description">
+            <h3>Nav Finder Backend</h3>
+            <p>
+                Navfinder is a revolutionary travel platform dedicated to streamlining travel logistics and solving
+                transportation challenges for users. With a focus on providing seamless travel and item
+                transportation solutions, Navfinder offers a user-friendly interface and robust features to simplify
+                the entire process. From planning and booking to managing travel arrangements and item shipments,
+                Navfinder aims to redefine the way people navigate their journeys and transport their belongings.
+            </p>
+        </div>
+        <div class="project-tags">
+            <span class="tag">JavaScript</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">NodeJs</span>
+            <span class="tag">Express Js</span>
+            <span class="tag">MongoDB</span>
+            <span class="tag">AWS</span>
+            <span class="tag">Mongoose</span>
+            <span class="tag">OAuth</span>
+        </div>
+        <div class="project-button-container">
+            <button class="project-btn know-more" onclick="goTo('https://example.com')">
+                <i class="fas fa-info-circle"></i> Know More
+            </button>
+            <button class="project-btn github" onclick="goTo('https://github.com/RDGems/Nav-Finder-Backend')">
+                <i class="fab fa-github"></i> GitHub
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function goTo(link) {
+            window.open(link, '_blank');
+        }
+    </script>
+</body>
+</html>
