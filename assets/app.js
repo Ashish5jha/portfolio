@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function getResume() {
-  window.open('https://www.shopify.com/stock-photos/photos/hiker-looks-out-over-bay-surrounded-by-mountains?c=village', '_blank'); // Replace with your desired URL
+  window.open('./assets/resume.pdf', '_blank'); // Replace with your desired URL
 }
 document.addEventListener("DOMContentLoaded", function() {
   const items = document.querySelectorAll(".timeline-item");
