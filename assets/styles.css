@@ -2706,7 +2706,7 @@ body {
 }
 
 .footer {
-    background-color: #333;
+    background-color: #000;
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -2906,5 +2906,120 @@ p {
         height: 620px;
         border-radius: 16px;
         overflow: hidden;
+    }
+}
+/*Footer with waves*/
+.last-footer {
+    position: relative;
+    background: #05b3a4;
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.last-social-icon,
+.last-menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+.last-social-icon__item,
+.last-menu__item {
+    list-style: none;
+}
+
+.last-social-icon__link {
+    font-size: 2rem;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+.last-social-icon__link:hover {
+    transform: translateY(-10px);
+}
+
+.last-menu__link {
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+    text-decoration: none;
+    opacity: 0.75;
+    font-weight: 300;
+}
+.last-menu__link:hover {
+    color: white;
+    opacity: 1;
+}
+
+.last-footer p {
+    color: #fff;
+    margin: 15px 0 10px 0;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.last-fwave {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url("../assets/Imgur.png");
+    background-size: 1000px 100px;
+}
+
+.last-fwave#last-wave1 {
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animateLastWaves 4s linear infinite;
+}
+
+.last-fwave#last-wave2 {
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animateLast 4s linear infinite !important;
+}
+
+.last-fwave#last-wave3 {
+    z-index: 1000;
+    opacity: 0.2;
+    bottom: 15px;
+    animation: animateLastWaves 3s linear infinite;
+}
+
+.last-fwave#last-wave4 {
+    z-index: 999;
+    opacity: 0.7;
+    bottom: 20px;
+    animation: animateLast 3s linear infinite;
+}
+
+@keyframes animateLastWaves {
+    0% {
+        background-position-x: 1000px;
+    }
+    100% {
+        background-position-x: 0px;
+    }
+}
+
+@keyframes animateLast {
+    0% {
+        background-position-x: -1000px;
+    }
+    100% {
+        background-position-x: 0px;
     }
 }

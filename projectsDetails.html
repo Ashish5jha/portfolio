@@ -1,9 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Project Details - Nav Finder Backend</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./assets/all.min.css" rel="stylesheet">
+    <!-- css -->
+    <link href="./assets/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-----Fevicon----->
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/logo.webp">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/logo.webp">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/logo.webp">
+    <link rel="manifest" href="./assets/site.webmanifest">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
@@ -12,6 +23,7 @@
             padding: 0;
             background-color: #f4f4f4;
         }
+
         .container {
             max-width: 800px;
             margin: 50px auto;
@@ -20,31 +32,37 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+
         .project-image {
             width: 100%;
             height: auto;
             border-radius: 8px;
         }
+
         .project-description {
             margin-top: 20px;
         }
+
         .project-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
             margin-top: 20px;
         }
+
         .tag {
             background-color: #e0e0e0;
             border-radius: 4px;
             padding: 4px 8px;
             font-size: 14px;
         }
+
         .project-button-container {
             display: flex;
             gap: 1rem;
             margin-top: 20px;
         }
+
         .project-btn {
             display: flex;
             align-items: center;
@@ -60,30 +78,37 @@
             transition: background-color 0.3s ease, transform 0.3s ease;
             width: 120px;
         }
+
         .project-btn i {
             margin-right: 8px;
         }
+
         .project-btn:hover {
             background-color: green;
             transform: scale(1.05);
         }
+
         .project-btn.know-more {
             background-color: #007bff;
         }
+
         .project-btn.know-more:hover {
             background-color: #0056b3;
         }
+
         .project-btn.github {
             background-color: #24292e;
         }
+
         .project-btn.github:hover {
             background-color: #000;
         }
     </style>
 </head>
+
 <body>
     <div class="container" id="1">
-        <img src="./Ashish Jha __ Home_files/project1.png" alt="Project Image" class="project-image">
+        <img src="./assets/project1.png" alt="Project Image" class="project-image">
         <div class="project-description">
             <h3>Nav Finder Backend</h3>
             <p>
@@ -113,6 +138,20 @@
             </button>
         </div>
     </div>
+    <footer class="last-footer">
+        <div class="last-fwaves">
+            <div class="last-fwave" id="last-wave1"></div>
+            <div class="last-fwave" id="last-wave2"></div>
+            <div class="last-fwave" id="last-wave3"></div>
+            <div class="last-fwave" id="last-wave4"></div>
+        </div>
+
+        <ul class="last-menu">
+            <li class="last-menu__item"><a class="last-menu__link" href="#">Home</a></li>
+            <li class="last-menu__item"><a class="last-menu__link" href="#">About us</a></li>
+            <li class="last-menu__item"><a class="last-menu__link" href="#">Contact us</a></li>
+        </ul>
+    </footer>
 
     <script>
         function goTo(link) {
@@ -120,4 +159,5 @@
         }
     </script>
 </body>
+
 </html>
