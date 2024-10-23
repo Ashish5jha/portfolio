@@ -2923,7 +2923,7 @@ p {
 .last-footer {
     position: relative;
     background: #000;
-    min-height: 50vh;
+    min-height: 70vh;
     padding: 20px 50px;
     display: flex;
     justify-content: center;
@@ -3016,4 +3016,37 @@ p {
     100% {
         background-position-x: 0px;
     }
+}
+
+.foot-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.foot-container1 {
+    flex-basis: 40%;
+}
+
+.foot-container2 {
+    flex-basis: 50%;
+    background-color: #b4eb00;
+
+}
+.foot-collection{
+    text-decoration: none;
+    color: white;
+}
+.foot-collection li{
+    padding: 9px;
+    border-radius: 10px;
+    cursor: pointer;
+    background: transparent;
+    margin: 5px ;
+    text-align: center;
+    transition: hover 200ms ease-in-out;
+}
+.foot-collection li:hover{
+    background: #9f9f9f;
 }
