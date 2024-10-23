@@ -2732,7 +2732,8 @@ body {
     font-size: 18px;
 }
 
-.footer-column p, .footer-column ul {
+.footer-column p,
+.footer-column ul {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -2800,15 +2801,18 @@ p {
 
 /* ------------------------------------mobile view-------------------------------------------------- */
 @media screen and (min-width: 320px) and (max-width: 1200px) {
-    .web-view{
+    .web-view {
         display: none;
     }
-    .mbl-view{
+
+    .mbl-view {
         display: inherit;
     }
-    hr{
+
+    hr {
         width: 150px !important;
     }
+
     .waves {
         width: 90rem;
         height: 61rem;
@@ -2855,9 +2859,11 @@ p {
     .exper-content {
         padding: 2rem 1rem;
     }
+
     .project-row {
         flex-direction: column;
     }
+
     .socket {
         width: 269px;
         height: 188px;
@@ -2867,10 +2873,12 @@ p {
         opacity: 0.6;
         margin-top: -150px;
     }
-    .contact-box{
+
+    .contact-box {
         flex-direction: column !important;
         margin: 20px;
     }
+
     .wave {
         position: absolute;
         width: 288vw;
@@ -2881,7 +2889,8 @@ p {
         margin: -2% 0 17% -10%;
         background: linear-gradient(800deg, #4ec4ff, #8205ff 60%, #00ddeb);
     }
-    .main{
+
+    .main {
         margin-top: 0rem;
     }
 }
@@ -2889,7 +2898,7 @@ p {
 @media screen and (min-width:320px) and (max-width:400px) {
     .wave {
         position: absolute;
-        width:101rem;
+        width: 101rem;
         height: 90rem;
         opacity: 0.55;
         left: -127px;
@@ -2897,7 +2906,8 @@ p {
         margin: -2% 0 17% -10%;
         background: linear-gradient(800deg, #4ec4ff, #8205ff 60%, #00ddeb);
     }
-    .e-card{
+
+    .e-card {
         margin: 10px auto;
         background: transparent;
         box-shadow: 0px 8px 28px -9px rgba(0, 0, 0, 0.45);
@@ -2908,11 +2918,12 @@ p {
         overflow: hidden;
     }
 }
+
 /*Footer with waves*/
 .last-footer {
     position: relative;
-    background: #05b3a4;
-    min-height: 100px;
+    background: #000;
+    min-height: 50vh;
     padding: 20px 50px;
     display: flex;
     justify-content: center;
@@ -2942,6 +2953,7 @@ p {
     display: inline-block;
     transition: 0.5s;
 }
+
 .last-social-icon__link:hover {
     transform: translateY(-10px);
 }
@@ -2956,6 +2968,7 @@ p {
     opacity: 0.75;
     font-weight: 300;
 }
+
 .last-menu__link:hover {
     color: white;
     opacity: 1;
@@ -2970,46 +2983,26 @@ p {
 
 .last-fwave {
     position: absolute;
-    top: -100px;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    background: url("../assets/Imgur.png");
-    background-size: 1000px 100px;
+    top: -10rem;
+    left: -9px;
+    width: 100vw;
+    height: 32vh;
+    background: url(../assets/Imgur.svg);
 }
 
 .last-fwave#last-wave1 {
     z-index: 1000;
     opacity: 1;
     bottom: 0;
-    animation: animateLastWaves 4s linear infinite;
+    /* animation: animateLastWaves 4s linear infinite; */
 }
 
-.last-fwave#last-wave2 {
-    z-index: 999;
-    opacity: 0.5;
-    bottom: 10px;
-    animation: animateLast 4s linear infinite !important;
-}
-
-.last-fwave#last-wave3 {
-    z-index: 1000;
-    opacity: 0.2;
-    bottom: 15px;
-    animation: animateLastWaves 3s linear infinite;
-}
-
-.last-fwave#last-wave4 {
-    z-index: 999;
-    opacity: 0.7;
-    bottom: 20px;
-    animation: animateLast 3s linear infinite;
-}
 
 @keyframes animateLastWaves {
     0% {
         background-position-x: 1000px;
     }
+
     100% {
         background-position-x: 0px;
     }
@@ -3019,6 +3012,7 @@ p {
     0% {
         background-position-x: -1000px;
     }
+
     100% {
         background-position-x: 0px;
     }
