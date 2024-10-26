@@ -2788,136 +2788,6 @@ p {
     margin-top: 20px;
 }
 
-@media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footer-column {
-        margin-bottom: 20px;
-    }
-}
-
-/* ------------------------------------mobile view-------------------------------------------------- */
-@media screen and (min-width: 320px) and (max-width: 1200px) {
-    .web-view {
-        display: none;
-    }
-
-    .mbl-view {
-        display: inherit;
-    }
-
-    hr {
-        width: 150px !important;
-    }
-
-    .waves {
-        width: 90rem;
-        height: 61rem;
-        position: absolute;
-        top: -19%;
-        left: 40%;
-        margin-left: -539px;
-        margin-top: -500px;
-        border-radius: 41%;
-        background: #f4f2ee;
-        animation: waves 15s infinite linear;
-    }
-
-    .hero-photos {
-        max-width: 25rem;
-        height: 22rem;
-        -o-object-fit: cover;
-        object-fit: cover;
-        border-radius: var(--radius);
-        position: relative;
-    }
-
-    .section-title {
-        flex-direction: column;
-    }
-
-    .reaction-emoji {
-        font-size: 30px;
-    }
-
-    .skills-section {
-        flex-direction: column !important;
-        width: 100% !important;
-    }
-
-    .skills-card {
-        width: auto !important;
-    }
-
-    .service {
-        width: 100%;
-    }
-
-    .exper-content {
-        padding: 2rem 1rem;
-    }
-
-    .project-row {
-        flex-direction: column;
-    }
-
-    .socket {
-        width: 269px;
-        height: 188px;
-        position: absolute;
-        margin-left: -50px;
-        top: 1%;
-        opacity: 0.6;
-        margin-top: -150px;
-    }
-
-    .contact-box {
-        flex-direction: column !important;
-        margin: 20px;
-    }
-
-    .wave {
-        position: absolute;
-        width: 288vw;
-        height: 105rem;
-        opacity: 0.55;
-        left: -127px;
-        top: -9rem;
-        margin: -2% 0 17% -10%;
-        background: linear-gradient(800deg, #4ec4ff, #8205ff 60%, #00ddeb);
-    }
-
-    .main {
-        margin-top: 0rem;
-    }
-}
-
-@media screen and (min-width:320px) and (max-width:400px) {
-    .wave {
-        position: absolute;
-        width: 101rem;
-        height: 90rem;
-        opacity: 0.55;
-        left: -127px;
-        top: -9rem;
-        margin: -2% 0 17% -10%;
-        background: linear-gradient(800deg, #4ec4ff, #8205ff 60%, #00ddeb);
-    }
-
-    .e-card {
-        margin: 10px auto;
-        background: transparent;
-        box-shadow: 0px 8px 28px -9px rgba(0, 0, 0, 0.45);
-        position: relative;
-        width: 94%;
-        height: 620px;
-        border-radius: 16px;
-        overflow: hidden;
-    }
-}
 
 /*Footer with waves*/
 .last-footer {
@@ -3029,24 +2899,271 @@ p {
     flex-basis: 40%;
 }
 
-.foot-container2 {
-    flex-basis: 50%;
-    background-color: #b4eb00;
+.foot-container2 {}
 
-}
-.foot-collection{
+.foot-collection {
     text-decoration: none;
     color: white;
 }
-.foot-collection li{
-    padding: 9px;
+
+.foot-collection li {
+    padding: 9px 20px;
     border-radius: 10px;
     cursor: pointer;
     background: transparent;
-    margin: 5px ;
+    margin: 5px;
     text-align: center;
     transition: hover 200ms ease-in-out;
+    font-weight: 500;
 }
-.foot-collection li:hover{
-    background: #9f9f9f;
+
+.foot-collection li:hover {
+    background: #fff;
+    color: #000;
+}
+
+.foot-container2 .loc {
+    font-size: 18px;
+    color: #b3b1b1;
+}
+
+.foot-container2 i {
+    font-size: 18px;
+    color: #fff;
+}
+
+.foot-name {
+    margin-top: 1rem;
+    font-size: 25px;
+    font-weight: 500;
+    color: #d5d2d2;
+}
+
+.foot-title {
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: .2rem;
+    white-space: nowrap;
+    position: relative;
+    display: inline-block;
+    background: linear-gradient(90deg, #c885ff, #1b786e, #ff0080, #ff8c00);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-animation 5s ease infinite;
+}
+
+.foot-title::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    transform: scaleY(-1);
+    background: linear-gradient(90deg, #39125c, #a578ff, #ff0080, #d5c9ba);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0.5;
+    animation: gradient-animation 5s ease infinite;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.foot-index-neumorph {
+    background-color: #333;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow:
+        8px 8px 15px rgba(0, 0, 0, 0.3),
+        /* Darker shadow for depth */
+        -8px -8px 15px rgba(255, 255, 255, 0.1),
+        /* Lighter shadow for highlight */
+        inset 4px 4px 8px rgba(0, 0, 0, 0.2),
+        /* Inner shadow for depth */
+        inset -4px -4px 8px rgba(255, 255, 255, 0.1);
+    /* Inner highlight */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.foot-index-neumorph:hover {
+
+    transform: scale(1.05);
+    /* Slightly enlarge the element */
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-column {
+        margin-bottom: 20px;
+    }
+
+    .foot-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        flex-direction: column;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .last-fwave#last-wave1 {
+        z-index: 1000;
+        opacity: 1;
+        bottom: 0;
+        animation: animateLastWaves 4s linear infinite;
+    }
+}
+
+/* ------------------------------------mobile view-------------------------------------------------- */
+@media screen and (min-width: 320px) and (max-width: 1200px) {
+    .web-view {
+        display: none;
+    }
+
+    .mbl-view {
+        display: inherit;
+    }
+
+    hr {
+        width: 150px !important;
+    }
+
+    .waves {
+        width: 90rem;
+        height: 61rem;
+        position: absolute;
+        top: -19%;
+        left: 40%;
+        margin-left: -539px;
+        margin-top: -500px;
+        border-radius: 41%;
+        background: #f4f2ee;
+        animation: waves 15s infinite linear;
+    }
+
+    .hero-photos {
+        max-width: 25rem;
+        height: 22rem;
+        -o-object-fit: cover;
+        object-fit: cover;
+        border-radius: var(--radius);
+        position: relative;
+    }
+
+    .section-title {
+        flex-direction: column;
+    }
+
+    .reaction-emoji {
+        font-size: 30px;
+    }
+
+    .skills-section {
+        flex-direction: column !important;
+        width: 100% !important;
+    }
+
+    .skills-card {
+        width: auto !important;
+    }
+
+    .service {
+        width: 100%;
+    }
+
+    .exper-content {
+        padding: 2rem 1rem;
+    }
+
+    .project-row {
+        flex-direction: column;
+    }
+
+    .socket {
+        width: 269px;
+        height: 188px;
+        position: absolute;
+        margin-left: -50px;
+        top: 1%;
+        opacity: 0.6;
+        margin-top: -150px;
+    }
+
+    .contact-box {
+        flex-direction: column !important;
+        margin: 20px;
+    }
+
+    .wave {
+        position: absolute;
+        width: 288vw;
+        height: 105rem;
+        opacity: 0.55;
+        left: -127px;
+        top: -9rem;
+        margin: -2% 0 17% -10%;
+        background: linear-gradient(800deg, #4ec4ff, #8205ff 60%, #00ddeb);
+    }
+
+    .main {
+        margin-top: 0rem;
+    }
+
+    .last-fwave {
+        position: absolute;
+        top: -2rem;
+        left: -9px;
+        width: 110vw;
+        z-index: 200000;
+        height: 6vh;
+        background: url(../assets/Imgur.svg);
+    }
+
+}
+
+@media screen and (min-width:320px) and (max-width:400px) {
+    .wave {
+        position: absolute;
+        width: 101rem;
+        height: 90rem;
+        opacity: 0.55;
+        left: -127px;
+        top: -9rem;
+        margin: -2% 0 17% -10%;
+        background: linear-gradient(800deg, #4ec4ff, #8205ff 60%, #00ddeb);
+    }
+
+    .e-card {
+        margin: 10px auto;
+        background: transparent;
+        box-shadow: 0px 8px 28px -9px rgba(0, 0, 0, 0.45);
+        position: relative;
+        width: 94%;
+        height: 620px;
+        border-radius: 16px;
+        overflow: hidden;
+    }
+
 }
