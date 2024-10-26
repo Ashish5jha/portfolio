@@ -2768,7 +2768,7 @@ body {
 }
 
 .social-icons li a {
-    color: #fff;
+    color: #333;
     font-size: 20px;
     transition: color 0.3s;
 }
@@ -2913,12 +2913,22 @@ p {
     background: transparent;
     margin: 5px;
     text-align: center;
-    transition: hover 200ms ease-in-out;
+    transition: background 200ms ease-in-out, color 200ms ease-in-out;
     font-weight: 500;
+}
+
+.foot-collection li a {
+    text-decoration: none;
+    color: white;
+    transition: color 200ms ease-in-out;
 }
 
 .foot-collection li:hover {
     background: #fff;
+    color: #000;
+}
+
+.foot-collection li:hover a {
     color: #000;
 }
 
