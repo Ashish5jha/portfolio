@@ -2768,7 +2768,7 @@ body {
 }
 
 .social-icons li a {
-    color: #fff;
+    color: #333;
     font-size: 20px;
     transition: color 0.3s;
 }
@@ -2913,12 +2913,22 @@ p {
     background: transparent;
     margin: 5px;
     text-align: center;
-    transition: hover 200ms ease-in-out;
+    transition: background 200ms ease-in-out, color 200ms ease-in-out;
     font-weight: 500;
+}
+
+.foot-collection li a {
+    text-decoration: none;
+    color: white;
+    transition: color 200ms ease-in-out;
 }
 
 .foot-collection li:hover {
     background: #fff;
+    color: #000;
+}
+
+.foot-collection li:hover a {
     color: #000;
 }
 
@@ -3007,7 +3017,31 @@ p {
     transform: scale(1.05);
     /* Slightly enlarge the element */
 }
+.thanks {
+    font-size: 12px !important;
+    color: #ccc;
+    text-align: center;
+    margin-top: 20px;
+}
 
+.thanks a {
+    transition: color 0.3s ease;
+}
+
+.thanks a:hover {
+    color: #fff;
+}
+.foot-title-a{
+    font-size: 12px;
+    white-space: nowrap;
+    position: relative;
+    display: inline-block;
+    background: linear-gradient(90deg, #c885ff, #1b786e, #ff0080, #ff8c00);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-animation 5s ease infinite;
+}
 @media (max-width: 768px) {
     .footer-container {
         flex-direction: column;
