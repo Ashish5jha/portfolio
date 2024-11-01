@@ -3167,3 +3167,49 @@ p {
     }
 
 }
+
+/* ----------------------------------------------------------------------------Blog =====================*/
+
+.section-vertical-space {
+    padding: 76px 0;
+}
+
+section {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+.wrap {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.section-strength-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section-strength-row .section-strength-col {
+    flex: 0 0 33.33%;
+    margin-bottom: 48px;
+    margin-right: 40px;
+    max-width: calc(33.33% - 27px);
+}
+
+.section-strength-row .section-strength-img {
+    display: flex;
+    margin-bottom: 16px;
+    position: relative;
+    height: 80px;
+    width: 80px;
+    align-items: center;
+}
+
+.section-strength-row .section-strength-img object,
+.section-strength-row .section-strength-img .animated-svg {
+    display: block;
+    left: 16px;
+    max-width: 48px;
+    position: absolute;
+    top: 16px;
+}
