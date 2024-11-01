@@ -3071,6 +3071,55 @@ p {
         bottom: 0;
         animation: animateLastWaves 4s linear infinite;
     }
+    .section-strength-row .section-strength-col {
+        flex: 0 0 48%;
+        margin-bottom: 48px;
+        margin-right: 21px;
+        margin-left: 21px;
+        max-width: calc(49% - 27px);
+    }
+}
+
+.section-vertical-space {
+    padding: 76px 0;
+}
+
+
+
+.wrap {
+    max-width: 98vw;
+    margin: auto;
+}
+
+.section-strength-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.section-strength-row .section-strength-col {
+    flex: 0 0 28.33%;
+    margin-bottom: 48px;
+    margin-right: 31px;
+    max-width: calc(32.33% - 27px);
+}
+
+.section-strength-row .section-strength-img {
+    display: flex;
+    margin-bottom: 16px;
+    position: relative;
+    height: 80px;
+    width: 80px;
+    align-items: center;
+}
+
+.section-strength-row .section-strength-img object,
+.section-strength-row .section-strength-img .animated-svg {
+    display: block;
+    left: 16px;
+    max-width: 48px;
+    position: absolute;
+    top: 16px;
 }
 
 /* ------------------------------------mobile view-------------------------------------------------- */
@@ -3202,49 +3251,14 @@ p {
         border-radius: 16px;
         overflow: hidden;
     }
+    .section-strength-row .section-strength-col {
+        flex: 0 0 100%;
+        margin-bottom: 48px;
+        margin-right: 21px;
+        margin-left: 21px;
+        max-width: calc(100% - 27px);
+    }
 
 }
 
-/* ----------------------------------------------------------------------------Blog =====================*/
 
-.section-vertical-space {
-    padding: 76px 0;
-}
-
-
-
-.wrap {
-    max-width: 98vw;
-    margin: auto;
-}
-
-.section-strength-row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.section-strength-row .section-strength-col {
-    flex: 0 0 28.33%;
-    margin-bottom: 48px;
-    margin-right: 31px;
-    max-width: calc(32.33% - 27px);
-}
-
-.section-strength-row .section-strength-img {
-    display: flex;
-    margin-bottom: 16px;
-    position: relative;
-    height: 80px;
-    width: 80px;
-    align-items: center;
-}
-
-.section-strength-row .section-strength-img object,
-.section-strength-row .section-strength-img .animated-svg {
-    display: block;
-    left: 16px;
-    max-width: 48px;
-    position: absolute;
-    top: 16px;
-}
