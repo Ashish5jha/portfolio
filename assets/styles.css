@@ -218,45 +218,7 @@ p {
     justify-self: end
 }
 
-@media screen and (min-width:768px) {
-    .nav {
-        background: var(--clr-primary-10)
-    }
 
-    .nav-btn {
-        display: none
-    }
-
-    .nav-links {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        justify-items: center;
-        -webkit-column-gap: 2rem;
-        -moz-column-gap: 2rem;
-        column-gap: 2rem;
-        justify-self: end
-    }
-
-    .nav-links a {
-        text-transform: capitalize;
-        color: var(--clr-grey-1);
-        font-weight: 700;
-        letter-spacing: var(--spacing);
-        -webkit-transition: var(--transition);
-        transition: var(--transition)
-    }
-
-    .nav-links a:hover {
-        color: var(--clr-primary-5)
-    }
-
-    .nav-center {
-        display: grid;
-        grid-template-columns: auto 1fr;
-        -webkit-box-align: center;
-        align-items: center
-    }
-}
 
 .navbar-fixed {
     position: fixed;
@@ -3227,9 +3189,61 @@ p {
         height: 6vh;
         background: url(../assets/Imgur.svg);
     }
-
+    .section-strength-row .section-strength-col {
+        flex: 0 0 42.33%;
+        margin-bottom: 48px;
+        margin-right: 31px;
+        max-width: calc(46.57% - 27px);
+    }
 }
+@media screen and (min-width:768px) {
+    .nav {
+        background: var(--clr-primary-10)
+    }
 
+    .nav-btn {
+        display: none
+    }
+
+    .nav-links {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
+        -webkit-column-gap: 2rem;
+        -moz-column-gap: 2rem;
+        column-gap: 2rem;
+        justify-self: end
+    }
+
+    .nav-links a {
+        text-transform: capitalize;
+        color: var(--clr-grey-1);
+        font-weight: 700;
+        letter-spacing: var(--spacing);
+        -webkit-transition: var(--transition);
+        transition: var(--transition)
+    }
+
+    .nav-links a:hover {
+        color: var(--clr-primary-5)
+    }
+
+    .nav-center {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        -webkit-box-align: center;
+        align-items: center
+    }
+   
+}
+@media screen   and (max-width:768px){
+    .section-strength-row .section-strength-col {
+        flex: 0 0 80.33%;
+        margin-bottom: 48px;
+        margin-right: 31px;
+        max-width: calc(80% - 27px);
+    }
+}
 @media screen and (min-width:320px) and (max-width:400px) {
     .wave {
         position: absolute;
