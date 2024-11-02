@@ -3260,12 +3260,25 @@ p {
         margin-left: 21px;
         max-width: calc(100% - 27px);
         cursor: pointer !important;
+        padding: 15px !important;
     }
 
 }
 
+
 .animated-svg {
     cursor: pointer !important;
+    box-shadow: inset 0 2px 4px 0 rgba(66, 65, 65, 0.045);
+    padding: 10px;
+    border-radius: 12.5px;
+    border: .2px solid #d1d0d051;
+    transition: transform 0.7s ease, box-shadow 0.3s ease;
+}
+
+.animated-svg:hover {
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    transform: translateY(-5px);
+    border: .2px solid #e3e0e0c4;
 }
 
 .animated-svg:hover img {
