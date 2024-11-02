@@ -549,7 +549,7 @@ hr.hr-separator {
     justify-content: center;
     font-size: 25px;
     font-weight: bold;
-    background:linear-gradient(45deg, #ead9c1, #b2d5dce2);
+    background: linear-gradient(45deg, #ead9c1, #b2d5dce2);
     transition: all 0.5s;
 }
 
@@ -3259,10 +3259,14 @@ p {
         margin-right: 21px;
         margin-left: 21px;
         max-width: calc(100% - 27px);
+        cursor: pointer !important;
     }
 
 }
 
+.animated-svg {
+    cursor: pointer !important;
+}
 
 .animated-svg:hover img {
     animation: scale-rotate-animation 6s infinite;
