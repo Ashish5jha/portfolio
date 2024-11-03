@@ -3313,9 +3313,10 @@ p {
     border: .2px solid #e3e0e0c4;
 }
 
-.animated-svg:hover img {
+.animated-svg:hover .first-image {
     animation: scale-rotate-animation 6s infinite;
 }
+
 .external-link-icon {
     position: absolute;
     top: 50%;
@@ -3324,9 +3325,11 @@ p {
     opacity: 0;
     transition: opacity 0.3s ease;
 }
+
 .section-strength-img:hover .external-link-icon {
     opacity: 1;
 }
+
 @keyframes scale-rotate-animation {
 
     0%,
@@ -3345,4 +3348,22 @@ p {
     75% {
         transform: scale(0.8) rotate(270deg);
     }
+}
+
+.notion-icon {
+    user-select: none;
+    transition: background 20ms ease-in;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    border-radius: 6px;
+    height: 32px;
+    padding: 0px 10px;
+    font-size: 14px;
+    line-height: 1.2;
+    border: 1px solid rgba(57, 26, 26, 0.13);
+    box-shadow: inset 0 2px 4px 0 rgba(66, 65, 65, 0.045);
+    margin-left: 12.5rem;
 }
