@@ -3189,6 +3189,7 @@ p {
         height: 6vh;
         background: url(../assets/Imgur.svg);
     }
+
     .section-strength-row .section-strength-col {
         flex: 0 0 42.33%;
         margin-bottom: 48px;
@@ -3196,6 +3197,7 @@ p {
         max-width: calc(46.57% - 27px);
     }
 }
+
 @media screen and (min-width:768px) {
     .nav {
         background: var(--clr-primary-10)
@@ -3234,9 +3236,22 @@ p {
         -webkit-box-align: center;
         align-items: center
     }
-   
+
 }
-@media screen   and (max-width:768px){
+
+.dotPattern {
+    height: fit-content;
+    width: 100vw;
+    background-image: url(../assets/patterns.png);
+    background-size: cover;
+    /* Adjusts the size of the background image to cover the entire element */
+    background-position: center;
+    /* Centers the background image */
+    background-repeat: no-repeat;
+    /* Prevents the background image from repeating */
+}
+
+@media screen and (max-width:768px) {
     .section-strength-row .section-strength-col {
         flex: 0 0 80.33%;
         margin-bottom: 48px;
@@ -3244,6 +3259,7 @@ p {
         max-width: calc(80% - 27px);
     }
 }
+
 @media screen and (min-width:320px) and (max-width:400px) {
     .wave {
         position: absolute;
@@ -3287,6 +3303,7 @@ p {
     border-radius: 12.5px;
     border: .2px solid #d1d0d051;
     transition: transform 0.7s ease, box-shadow 0.3s ease;
+    background-color: #f9f9fd;
 }
 
 .animated-svg:hover {
@@ -3298,7 +3315,17 @@ p {
 .animated-svg:hover img {
     animation: scale-rotate-animation 6s infinite;
 }
-
+.external-link-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.section-strength-img:hover .external-link-icon {
+    opacity: 1;
+}
 @keyframes scale-rotate-animation {
 
     0%,
