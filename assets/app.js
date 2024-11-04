@@ -1,3 +1,20 @@
+const asciiArt = `
+    __  __     ____                               __    ____    
+   / / / /__  / / /___       _      ______  _____/ /___/ / /    
+  / /_/ / _ \\/ / / __ \\     | | /| / / __ \\/ ___/ / __  / /     
+ / __  /  __/ / / /_/ /     | |/ |/ / /_/ / /  / / /_/ /_/      
+/_/ /_/\\___/_/_/\\____( )    |__/|__/\\____/_/  /_/\\__,_(_)       
+                     |/                                                
+`;
+
+console.log(`%c${asciiArt}`, 'color: cyan; font-family: monospace;');
+console.log('%cThanks for visiting my portfolio site! Please feel free to contact me using any of these options:', 'color: green;');
+console.log('%c📧 Email: network.ashishjha@gmail.com', 'color: yellow;');
+console.log('%c🐤 Twitter: https://twitter.com/ashish5jha', 'color: blue;');
+console.log('%c👨‍💼 LinkedIn: www.linkedin.com/in/ashish5jha/', 'color: magenta;');
+
+
+
 const closeBtn = document.querySelector("#close-btn");
 const date = document.querySelector("#date");
 
