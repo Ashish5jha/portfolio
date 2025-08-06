@@ -1,6 +1,6 @@
 # 🌟 Ashish Kumar Jha - MEAN/MERN Developer & Frontend Engineer
 
-Hi there! I'm **Ashish Kumar Jha**, a dedicated **Frontend Engineer** at **Novoinvent Software**, with expertise in building **scalable**, **responsive** web applications using **JavaScript frameworks**.
+Hi there! I'm **Ashish Kumar Jha**, a dedicated **Frontend Engineer** at **Novoinvent Software**, with expertise in building **scalable**, **responsive** web applications using **JavaScript frameworks **.
 
 ### 🔥 Core Skills:
 - **Frontend:** HTML, CSS, JavaScript, TypeScript, React, Angular
